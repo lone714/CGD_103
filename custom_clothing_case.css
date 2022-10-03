@@ -1,0 +1,102 @@
+
+
+
+.clothing-case h2{
+    margin: 20px 0;
+   
+    font-size: 30pt;
+    color: #D9D9D9;
+}
+
+.clothing-case .pic img{
+    width: 100%;
+}
+
+.Case{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+}
+
+.Case h2{
+    padding: 20px 0px;
+    color: #D9D9D9;
+
+}
+
+
+
+.Case-menu{
+    width: 100%;
+    /* min-height: 200px; */
+    background-color: #999;
+    position: relative;
+}
+.Case-control{
+    top: 75px;
+    position: sticky;
+}
+
+.choose-gas{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.emulator{
+    background: linear-gradient(180deg, #666464 0%, #4C4948 100%);
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.emulator p{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 52px;
+    color: #FAC766; 
+}
+
+.container.Case .Case-menu .Case-wrap{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(4 , 1fr);
+    gap: 20px;
+}
+
+
+
+.container.Case .Case-menu{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.container.Case  .Case-menu .Case-item h3{
+    width: 100%;
+    text-align: center;
+    margin-top: 7px;
+}
+.container.Case  .Case-menu .Case-item img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.methods{
+    z-index: 50;
+    position: relative;
+}
+
+.methods span{
+
+
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #999;
+}
+

@@ -1,0 +1,141 @@
+footer{
+    height: 1200px;
+    position: relative;
+    overflow: hidden;
+    margin-top:-1150px ;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    /* left: 0; */
+
+    z-index: 39;
+}
+
+.footer span{
+    display: block;
+    width: 100VW;
+    height: 4px;
+    left: 50%;
+    
+    margin: 10px 0;
+    background:
+    radial-gradient(circle at center,#E2AD49,rgba(226, 173, 73, 0));
+    position: absolute;
+    transform:translateX(-50%) translateY(50%);
+
+}
+
+.Disclaimer{
+    font-size: 8pt;
+    color: #ccc;
+    padding-top: 25px;
+}
+/* .Disclaimer::before{
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+
+    width: 100vw;
+    height: 600px;
+    top: 50%;
+    bottom: -50%;
+    position: absolute;
+    transform:translateX(-50%) translateY(50%);
+    background: #666464;
+    z-index: -1;
+} */
+
+.Disclaimer::after{
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+
+    width: 100vw;
+    height: 600px;
+    top: 50%;
+    bottom: -50%;
+    position: absolute;
+    transform:translateX(-50%) translateY(50%)
+    skewY(-15deg);
+    background: #666464;
+    z-index: -1;
+}
+.footer::before{
+    content: "";
+    top: 50%;
+    left: 60%;
+    
+    position: absolute;
+
+    width: 840px;
+    height: 840px;
+    /* top: 50%; */
+    
+    position: absolute;
+    transform:translateX(-50%) translateY(0%) rotate(-180deg);
+    border-radius: 800%;
+    background: linear-gradient(180.39deg, #FAC766 71.77%, rgba(250, 199, 102, 0) 106.36%);
+    z-index: -1;
+}
+.Disclaimer::before{
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 100vw;
+    height: 600px;
+    top: 50%;
+    bottom: -50%;
+    position: absolute;
+    transform:translateX(-50%) translateY(50%)
+    skewY(15deg);
+    background:linear-gradient(277.54deg, #D9D9D9 31.14%, #666464 99.59%);
+    z-index: -1;
+}
+.footer-bc1{
+    
+    width: 100%;
+    height: 600px;
+    bottom: 0;
+    position: absolute;
+    transform:skewY(-15deg);
+    background-color: #666464;
+    z-index: 1;
+  
+}
+.footer .row{
+    justify-content: center;
+    align-items: flex-end;
+}
+.footer-wrap{
+    margin-top: 1000px;
+    display: flex;
+    z-index: 10;
+}
+
+
+.footer-item{
+    margin-top: 10px;
+    
+}
+
+.footer li{
+    
+    padding: 10px 0px;
+    font-size: 14px;
+}
+.footer-wrap > li{
+    font-size: 18px;
+    /* line-height: 1.9; */
+    text-align: center;
+}
+
+
+.footer-wrap li a{
+    color: #fff;
+}

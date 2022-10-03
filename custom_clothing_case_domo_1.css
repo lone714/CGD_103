@@ -1,0 +1,106 @@
+.clothing_case{
+    margin-top: 0px;
+    margin-bottom:80px ;
+}
+
+
+.clothing-case h2{
+    margin: 20px 0;
+   
+    font-size: 30pt;
+    color: rgba(102, 100, 100, 1);
+}
+
+.clothing-case .pic img{
+    width: 100%;
+}
+
+.Case_domo{
+    margin-top: 100px;
+    position: relative;
+    z-index: 50;
+}
+.domo{
+    font-size: 18pt;
+    color: #999;
+    display: inline;
+}
+.domo a{
+    font-size: 18pt;
+    color: #999;
+    display: inline;
+}
+
+.domo h2{
+    display: inline;
+    font-size: 18pt;
+}
+.domo h3{
+    font-size: 18pt;
+    display: inline;
+    color: #D9D9D9;
+}
+
+.domo-wrap{
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: #fff;
+    display: flex;
+
+}
+
+.domo-pic{
+    width: 55%;
+    margin-right: 20px;
+}
+.domo-pic img{
+    width: 100%;
+}
+.domo-item{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.domo-item h4{
+    color:#666464;
+    padding: 10px 20px;
+    border-bottom: 4px solid #E2AD49; 
+    text-align: center;
+}
+.domo-item p{
+    color:#666464;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    flex-grow: 1;
+}
+.domo-form{
+    margin: 20px;
+}
+.domo-form ul{
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #E2AD49;
+}
+.domo-form ul:first-of-type{
+    border-top: 1px solid #E2AD49;
+}
+.domo-item .picS{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: (1,1fr);
+    gap: 20px;
+}
+
+.domo-item .picS img{
+    width: 100%;
+    cursor: pointer;
+}

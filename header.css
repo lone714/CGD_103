@@ -1,0 +1,223 @@
+
+
+
+header{
+    width: 100%;
+    height: 40px;
+    top: 0;
+    display: flex;
+    position: fixed;
+    filter:drop-shadow(0px 5px 7px rgba(0,0,0,.3));
+    z-index: 1000;
+}
+
+header::after{
+    width: 100%;
+    height: 500px;
+    top:calc(0%) ;
+    left:calc(-50%) ;
+    color: #000;
+    background:
+    linear-gradient(90deg, #FFFFFF 30%, #FFFFFF00 35%);
+    /* background-size: cover; */
+    transform:rotate(-8deg), scaleX(-50%) ,scaleY(-50%);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    z-index: 30;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0px 4px 15px rgba(0,0,0,.17));
+
+    z-index: 3;
+}
+
+
+/* -backglass的背景毛玻璃色塊 */
+.header-backglass1{
+    /* width: 120%; */
+    height: 500px;
+    top: -500px;
+    left: -200px;
+    background: linear-gradient(90deg, #FFFFFF 30%, #FFFFFF00 35%);
+    background-size: cover;
+    transform:rotate(-8deg);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    
+    /* z-index: 1; */
+}
+.header-backglass2{
+    background-color:rgba(255,255,255, .75);
+   
+    backdrop-filter: blur(10px);
+    /* overflow: hidden; */
+    
+}
+/* LOGO */
+h1 a{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    vertical-align: top;
+    
+    /* z-index: 50; */
+}
+/* 選單超連結 */                                                
+
+
+
+.main-nav .menu{
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav .menu a{
+    display: block;
+    padding: 11px;
+    color: rgba(102, 100, 100, 1);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration:none;
+    z-index: 50;
+}
+
+.main-nav .menu > li{
+    position: relative;
+
+}
+
+.main-nav .sub-menu{
+    display: none;
+    position: absolute;
+    background:#ffffff;
+    top: 100%;
+    z-index: 1000;
+}
+.main-nav .menu li:hover > a{
+    background-color: #FAC766;
+}
+.main-nav li:hover > .sub-menu{
+    display: block;
+}
+
+.menu-icon img{
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    /* z-index: 50; */
+}
+
+
+@media screen and (max-width:767px) {
+    .hb {
+        width: 40px;
+        height: 40px;
+        /* background-color: #666; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+    .main-nav {
+        /* display: none; */
+        position: absolute;
+        background-color: #fa0;
+        width: 100%;
+        left: -200%;
+        top: 100%;
+        opacity: 0.2;
+        transition: opacity 1s 0s,
+                    left    0s 1s,;
+    }
+    .menu
+
+    .hb span {
+        /* display: block; */
+        width: 36px;
+        height: 2px;
+        /* margin: 8px auto 0; */
+        background-color: #666464;
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(0deg);
+    }
+    .hb span:nth-child(1) {
+        top: 7px;
+        transition: transform 1s 0s, top 1s 1s;
+    }
+    .hb span:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        transition: opacity 1s 1s;
+    }
+    .hb span:nth-child(3) {
+        top: 31px;
+        transition: transform 1s 0s, top 1s 1s;
+    }
+    
+    .main-nav a {
+        display: block;
+    }
+    #menu-switch:checked + .header .main-nav {
+        /* display: block; */
+        left: 0;
+        opacity: 1;
+        transition: opacity 1s;
+    } 
+    #menu-switch:checked + .header .hb span:nth-child(2){
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    #menu-switch:checked + .header .hb span:nth-child(1){
+        top: 19px;
+        transform: rotate(45deg);
+        transition: top 1s 0s, transform 1s 1s;
+    }
+    #menu-switch:checked + .header .hb span:nth-child(3){
+        top: 19px;
+        transform: rotate(-45deg);
+        transition: top 1s 0s, transform 1s 1s;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .hb {display: block;}
+    /* .main-nav{
+        position: relative;     
+   
+        background-color: transparent; 
+    } */
+
+}
+@media screen and (min-width:1024px) {
+
+}
+@media screen and (min-width:1200px) {
+    .slogan{
+        padding:0 30px;
+        filter:drop-shadow(0px 0px 0px rgba(0,0,0,0));
+    }
+    .slogan p{
+        color:rgb(76, 73,72);
+        display: block;
+    }
+    .slogan .totem{
+        display: flex;
+        padding: 20px 0;
+        filter:drop-shadow(-5px 5px 3px rgba(0,0,0,.5));
+    }
+
+    .banner{
+        width: 800px;
+    }
+}
