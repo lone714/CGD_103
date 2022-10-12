@@ -28,7 +28,9 @@ a{
 /* a[href="#"]{
     border:  2px solid #f0f;
 } */
-
+h1 p{
+    display: none;
+}
 
 a:link { color: #FAC766; }
 a:visted { color: #ff8849 ; }
@@ -61,11 +63,12 @@ a:visted { color: #ff8849 ; }
 
 .slogans{
     padding-top: 100px;
-    justify-content: center;
+    justify-content: space-between;
 }
 .slogan{
     z-index: 35;
     padding:5px 5em;
+    text-align: center;
 }
 
 .slogan p{
@@ -80,31 +83,32 @@ a:visted { color: #ff8849 ; }
     filter:drop-shadow(-5px 5px 3px rgba(0,0,0,.5));
 }
 
+
+/* banner輪播圖 */
+
 .banner{
-    width: 90%;
+    /* width: 90%; */
     max-width: 800px;
     justify-content: center;
 
     z-index: 31;
 }
 
-/* banner輪播圖 */
-
-ul.slides{
+.banner ul.slides{
     position: relative;
     max-width: 768px;
-    width: 100%;
+    /* width: 100%; */
     height: 434px;
     list-style: none;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     background-color: #aaa;
     overflow: hidden;
     border-radius: 5px;
 }
 
-li.slide{
-    max-width: 768px;
+.banner li.slide{
+    max-width: 800px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -119,48 +123,48 @@ li.slide{
     transition: .5s transform ease-in-out;
 }
 
-.slide:nth-of-type(1){
+.banner .slide:nth-of-type(1){
     background: url(./pic/banner/banner-1.jpg);
-    max-width: 768px;
+    max-width:800px;
     background-position: right;
     width: 100%;
 }
-.slide:nth-of-type(2){
+.banner .slide:nth-of-type(2){
     background: url(./pic/banner/banner-2.jpg);
-    max-width: 768px;
+    max-width:800px;
     background-position: center;
     width: 100%;
     left: 100%;
 }
-.slide:nth-of-type(3){
+.banner .slide:nth-of-type(3){
     background: url(./pic/banner/banner-1.jpg);
-    max-width: 768px;
+    max-width:800px;
     background-position: right;
     width: 100%;
     left: 200%;
 }
-.slide:nth-of-type(4){
+.banner .slide:nth-of-type(4){
     background: url(./pic/banner/banner-2.jpg);
-    max-width: 768px;
+    max-width:800px;
     background-position: center;
     width: 100%;
     left: 300%;
 }
 
-input[type="radio"]{
+.banner input[type="radio"]{
     position: relative;
     z-index: 100;
     display: none;
 }
 
-.control-visible{
+.banner .control-visible{
 position: absolute;
 width: 100%;
 bottom: 12px;
 text-align: center;
 }
 
-.control-visible label{
+.banner .control-visible label{
 display: inline-block;
 width: 10px;
 height: 10px;
@@ -168,6 +172,7 @@ background-color: #00000080;
 border-radius: 50%;
 margin: 0 3px;
 }
+
 
 .slides input[type="radio"]:nth-of-type(1):checked ~.control-visible label:nth-of-type(1){
     background-color: #FAC766;
@@ -199,8 +204,6 @@ margin: 0 3px;
     transform: translateX(-300%);
 }
 
-
-
 /* 客製化衣服 */
 .clothes{
     z-index: 32;
@@ -210,8 +213,13 @@ margin: 0 3px;
     box-sizing: border-box;
 }
 .clothes-block{
+    /* display: flex;
+    flex-direction: row-reverse;
+    align-items: center; */
+    align-self: center;
     margin: 40px 0;
     overflow: visible;
+    position: relative;
 }
 .clothes-copywriting h2{
     display: inline;
@@ -264,53 +272,40 @@ margin: 0 3px;
 }
 
 /* 實做案例 */
-.clothes-wrapAA{
-    width: 100%;
-    height:auto;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-    
-    z-index: 50;
-}
 
-.swiper {
+
+.clothes-wrap{
     width: 100%;
     height: 100%;
+    padding: 0;
+    display: flex;
+    z-index: 50;
+}
+.clothes-wrap .swiper {
+    width: 1200px;
+    height: 200px;
+    right: 0;
+    position: relative;
+    overflow: visible;
+
+}
+.swiper-wrapper{
+    width:1980px;
+    display: flex;
+    right: -10px;
+    flex-direction: row-reverse;
+    position: absolute;
+
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-
-    /* Center slide text vertically */
-    /* display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center; */
+    width: 200px;
+    margin: 0 10px;
+    
+    transform: translateX(440px);
 }
-
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.swiper-slide img {
-    /* background: url(./pic/home/clothes/clothes-250px-0.png); */
-    background-color: #0cc;
+    background-color: #eee;
     display: block;
     width: 100%;
     height: 100%;
@@ -395,11 +390,11 @@ margin: 0 3px;
 }
 
 /* 紙袋實做案例 */
-.bags-wrapAA{
+.bags-wrap{
     width: 100%;
     height:auto;
     /* background: #eee; */
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
     font-size: 14px;
     color: #000;
     margin: 0;
@@ -802,7 +797,7 @@ input[name="color"] + span{
 }
 
 
-@keyframes AppearUp{
+/* @keyframes AppearUp{
     0% {
         opacity: 0;
         transform: perspective(600px) rotateX(0deg);
@@ -823,8 +818,14 @@ input[name="color"] + span{
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
     }
-}
+} */
 
+@media screen and (max-width:767px) {
+    .slogan{
+        text-align: center;
+    }
+
+}
 
 @media screen and (min-width:768px) {
 
@@ -837,7 +838,6 @@ input[name="color"] + span{
     p.slogan{
         display: inline-block;
         color: #FAC766;
-        text-align: center;
 
     }
 }

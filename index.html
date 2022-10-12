@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="swiper-bundle.min.css">
     
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
@@ -19,64 +16,66 @@
     
 </head>
 <body>
-    <header class="header-backglass2">   
-        <div class="container">
-            <div class="row">
-                <div class="header row">
-                    <h1>
-                        <a href="./index.html">
-                            <img src="./pic/header/New Clothes Bag-LOGO.svg" alt="【New Clothes Bag】logo">
-                        </a>
-                        <a href="">New Clothes Bag</a>
-                    </h1>
-                    <div>
-                        <label for="menu-switch" class="hb">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
-                    </div>
-                    <nav class="main-nav">
-                        <ul class="menu">
-                            <li>
-                                <a href="./custom_clothing_emulator.html">客製化衣服 &or;</a>
-                                <ul class="sub-menu">
-                                    <li><a href="./custom_clothing_emulator.html">衣服模擬器</a></li>
-                                    <li><a href="./custom_clothing_case.html">客製衣案例</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./custom_bag_emulator.html">客製化紙袋 &or;</a>
-                                <ul class="sub-menu">
-                                    <li><a href="./custom_bag_emulator.html">紙袋模擬器</a></li>
-                                    <li><a href="./custom_bag_case.html">客製袋案例</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./Spot_bag.html">現貨商品 &or;</a>
-                                <ul class="sub-menu">
-                                    <li><a href="./Spot_bag.html">現貨紙袋</a></li>
-                                    <li><a href="./Spot_clothing.html">現貨衣服</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./about.html">關於我們</a>
-                                <ul class="sub-menu">
-                                    <li><a href="./service.html">服務條款</a></li>
-                                    <li><a href="./privacy.html">隱私政策</a></li>
-                                </ul>
-                            </li>
+    <header>
+        <div class="header-backglass"></div>
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="container header">
+            <h1>
+                <a href="./index.html">
+                    <img src="./pic/header/New Clothes Bag-LOGO.svg" alt="【New Clothes Bag】logo">
+                </a>
+                <p>New Clothes Bag</p>
+            </h1>
+            
+            <label for="menu-switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li>
+                        <a href="./custom_clothing_emulator.html">客製化衣服 &or;</a>
+                        <ul class="sub-menu">
+                            <li><a href="./custom_clothing_emulator.html">衣服模擬器</a></li>
+                            <li><a href="./custom_clothing_case.html">客製衣案例</a></li>
                         </ul>
-                        
-                    </nav>     
-                    <div class="menu-icon">
-                        <a href=""></a><img src="pic/icon/icon_shopping.svg" alt="購物車">
-                        <img src="pic/icon/icon_member.svg" alt="會員登入">
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <a href="./custom_bag_emulator.html">客製化紙袋 &or;</a>
+                        <ul class="sub-menu">
+                            <li><a href="./custom_bag_emulator.html">紙袋模擬器</a></li>
+                            <li><a href="./custom_bag_case.html">客製袋案例</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./Spot_bag.html">現貨商品 &or;</a>
+                        <ul class="sub-menu">
+                            <li><a href="./Spot_bag.html">現貨紙袋</a></li>
+                            <li><a href="./Spot_clothing.html">現貨衣服</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./about.html">關於我們</a>
+                        <ul class="sub-menu">
+                            <li><a href="./service.html">服務條款</a></li>
+                            <li><a href="./privacy.html">隱私政策</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </nav>     
+            <div class="menu-icon">
+                <a href="">
+                    <img src="pic/icon/icon_shopping.svg" alt="購物車">
+                </a>
+                <a href="">
+                    <img src="pic/icon/icon_member.svg" alt="會員登入">
+                </a>
             </div>
         </div> 
-        <div class="header-backglass1"></div>
+        
     </header>
 
     <section class="container">
@@ -89,7 +88,7 @@
                 </div>
             </div>
             <div class="banner">
-                <ul class="slides swiper-wrapper">
+                <ul class="slides">
                     <input type="radio" id="control-1" name="control" checked>
                     <input type="radio" id="control-2" name="control">
                     <input type="radio" id="control-3" name="control">
@@ -120,12 +119,13 @@
                         <p>你知道這是甚麼嗎 ? 這是客製化衣服，只要提供圖案，挑選好適合的顏色，上面可以印你喜歡的LOGO，雖然我不是設計師，但衣服上可以印自己的LOGO圖案，感覺還不錯吧。</p>
                         <p>我們提供線上即時客製衣服模擬圖的製作，快點來搭配自己喜歡的風格吧 ! ! </p>
                     </div>
-                    <a href="./custom_clothing_case_demo_01.html">
-                        <div class="clothes-wrapAA">
+                        <div class="clothes-wrap col-md-8">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        <a href="./custom_clothing_case_demo_01.html">
+                                            <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
@@ -157,7 +157,6 @@
                                     <img src="./pic/icon/link-R.svg" alt="看更多客製化衣服" title="看更多客製化衣服">
                                 </div>
                             </div>
-                            
                         </div>
                         
 
@@ -187,7 +186,7 @@
                         <p>我們提供線上即時客製紙袋模擬圖的製作，快點來搭配自己喜歡的風格吧 ! ! </p>
                     </div>
                     <a href="./custom_clothing_case.html">
-                        <div class="bags-wrapAA">
+                        <div class="bags-wrap">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -222,11 +221,8 @@
                                 <div class="more">
                                     <img src="./pic/icon/link-R.svg" alt="看更多客製化紙袋" title="看更多客製化紙袋">
                                 </div>
-                            </div>
-                            
+                            </div>  
                         </div>
-                        
-
                     </a>
                 </div>
             </div>
@@ -394,7 +390,7 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -409,19 +405,7 @@
             prevEl: ".swiper-button-prev"
           }
         });
-      </script>
-
-    <!-- <script>
-        var swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar"
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-          }
-        });
       </script> -->
+
 </body>
 </html>
