@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="index.css">
     
     <title>新衣袋-New Clothes Bag</title>
-    
+    <script src="./index.js"></script>
 </head>
 <body>
     <header>
@@ -108,7 +108,7 @@
         </div>
     </section>
     <section class="container clothes">
-        <div class="row">
+        <div class="row md-position-r">
             <div class="col-md-12 col-xl-8 clothes">
                 <div class="clothes-block">
                     <div class="clothes-copywriting">
@@ -163,7 +163,7 @@
                     </a>
                 </div>
             </div>
-            <div  class="col-md-2 col-xl-4 clothes-pic">
+            <div  class="col-mi-4 col-md-4 col-xl-4 clothes-pic">
                 <a href="custom_clothing_case.html">
                     <img src="./pic/home/clothes/clothes-528px-0.png" alt="客製化衣服範例">
                 </a>
@@ -174,7 +174,7 @@
     </section>
 
     <section class="container bag">
-        <div class="row">
+        <div class="row md-position-r">
             <div class="col-md-12 col-xl-8 bag">
                 <div class="bag-block">
                     <div class="bag-copywriting">
@@ -221,7 +221,7 @@
                         </div>
                 </div>
             </div>
-            <div class="col-md-2 col-xl-4 clothes-pic">
+            <div class="col-mi-4 col-md-4 col-xl-4 clothes-pic">
                 <img src="./pic/home/bags/bag-01.png" alt="客製化紙袋範例">                
             </div>
             
@@ -268,14 +268,14 @@
         <div class="container footer">
             <div class="row">
                 
-                <div class="col-12 col-md-12">
-                    <div class="row row-cols-xl-3">
+                <div class="col-10 col-md-10">
+                    <div class="contactUs row row-cols-xl-3 row-cols-md-3">
                         <div class="col">
                             <div class="contactUs-card">
                                 <div>
                                     <a class="item" href="#">
                                         <div>
-                                            <img src="pic/icon/fb.svg" alt="fb">
+                                            <img class="icon" src="pic/icon/fb.svg" alt="fb">
                                             <div class="contactUs-card-service">
                                                 <p>09:30~17:30</p>
                                                 <p>真人客服</p>
@@ -295,8 +295,8 @@
                             <div class="contactUs-card">
                                 <div>
                                     <a class="item" href="#">
-                                        <div >
-                                            <img src="pic/icon/line.svg" alt="line">
+                                        <div>
+                                            <img class="icon" src="pic/icon/line.svg" alt="line">
                                             <div class="contactUs-card-service">
                                                 <p>09:30~17:30</p>
                                                 <p>真人客服</p>
@@ -316,15 +316,16 @@
                             <div class="contactUs-card">
                                 <div>
                                     <a class="item" href="#">
-                                        <div >
-                                            <img src="pic/icon/ig.svg" alt="ig">
+                                        <div>
+                                            <img class="icon" src="pic/icon/ig.svg" alt="ig">
                                             <div class="contactUs-card-service">
-                                            <p>09:30~17:30</p>
-                                            <p>真人客服</p>
-                                            <span></span>
-                                            <p>17:30~</p>
-                                            <p>常見QA自動回覆</p>
+                                                <p>09:30~17:30</p>
+                                                <p>真人客服</p>
+                                                <span></span>
+                                                <p>17:30~</p>
+                                                <p>常見QA自動回覆</p>
                                             </div>
+                                        </div>
                                         <div class="QR">
                                             <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
                                         </div>
@@ -334,7 +335,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12">
+                <div class=" col-6 col-md-6 col-md-8">
                     <ul class="footer-wrap row">
                         <li class="col-3">
                             <a href="./custom_clothing_emulator.html">客製化衣服</a>
@@ -343,21 +344,21 @@
                                 <li><a href="./custom_clothing_case.html">客製衣案例</a></li>
                             </ul>
                         </li>
-                        <li class="col-3 col-mi-4">
+                        <li class="col-3 col-mi-3">
                             <a href="./custom_bag_emulator.html">客製化紙袋</a>
                             <ul class="footer-item">
                                 <li><a href="./custom_bag_emulator.html">紙袋模擬器</a></li>
                                 <li><a href="./custom_bag_case.html">客製袋案例</a></li>
                             </ul>
                         </li>
-                        <li class="col-3 col-mi-4">
+                        <li class="col-3 col-mi-3">
                             <a href="./spot_bag.html">現貨商品</a>
                             <ul class="footer-item">
                                 <li><a href="./spot_bag.html">現貨紙袋</a></li>
                                 <li><a href="./spot_clothing.html">現貨衣服</a></li>
                             </ul>
                         </li>
-                        <li class="col-3 col-mi-4">
+                        <li class="col-3 col-mi-3">
                             <a href="./about.html">關於我們</a>
                             <ul class="footer-item">
                                 <li><a href="./service.html">服務條款</a></li>
@@ -365,22 +366,18 @@
                             </ul>
                         </li>
                     </ul>
-                   
-                <span></span>
-                <p class="Disclaimer">
-                本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
-                若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。
-                COPYRIGHT © 2022 PARTYME Co.,Ltd. All rights reserved.
-                </p>
+                </div>
+            <div class="col-12 col-md-12">
+            <span class="footer-span"></span>
+            <p class="Disclaimer">
+            本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
+            若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。
+            COPYRIGHT © 2022 PARTYME Co.,Ltd. All rights reserved.
+            </p>
             </div>
         </div> 
-        <!-- <div class="footer-bc0"></div> -->
-        <!-- <div class="footer-bc1"></div> -->
-        
-        </div>
-        
     </footer>
 
-    <script type="txtejavascript" src="index.js"></script>
+
 </body>
 </html>

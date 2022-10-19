@@ -141,8 +141,9 @@ h1 a{
 
     .hb span {
         display: block;
-        width: 36px;
-        height: 2px;
+        width: 34px;
+        height: 3px;
+        border-radius: 3px;
         margin: 8px auto 0;
         background-color: #4C4948;
         position: absolute;
@@ -171,7 +172,7 @@ h1 a{
 
 
     .hb span:nth-child(1) {
-        top: 7px;
+        top: 9px;
         transition: transform .3s 0s, top .3s .3s;
     }
     .hb span:nth-child(2) {
@@ -181,12 +182,12 @@ h1 a{
         transition: opacity .6s .3s;
     }
     .hb span:nth-child(3) {
-        top: 31px;
+        top: 29px;
         transition: transform .3s 0s, top .3s .3s;
     }
     
     .main-nav a {
-        /* display: block; */
+        display: block;
     }
     #menu-switch:checked + .header .main-nav {
         display: block;

@@ -7,8 +7,6 @@
     let bagsWrapper = document.querySelector(".bags-swiper-wrapper");
     let curIndex = 0;
     $id("clothesLeft").onclick = function () {
-        // console.log('按右鍵');
-        
         if (curIndex === 5) {
             curIndex = 0;
             clothesWrapper.style = `transform: translateX(0px);`;

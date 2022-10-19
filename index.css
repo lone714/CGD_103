@@ -305,8 +305,8 @@ margin: 0 3px;
     filter:drop-shadow(-2px 2px 3px #00000050);
 }
 .clothes-pic{
+    height: auto;
     z-index: 32;
-    
 }
 .clothes-pic img{
     width: 100%;
@@ -506,7 +506,7 @@ margin: 0 3px;
     left: 50%;
     position: absolute;
     width: calc(100vw);
-    height: 500px;
+    height: 300px;
     background: linear-gradient(15deg, #E2AD49 0%, #FAC766 100%);
     transform: translateX(-50%) translateY(-50%) skewY(15deg);
     transform-origin:center;
@@ -536,7 +536,7 @@ margin: 0 3px;
 
 .guideSlogan2{
     display: block;
-    margin: 250px auto;
+    margin: 350px auto;
     /* margin-left: 50px; */
     /* margin-bottom: 200px; */
     position: relative;
@@ -547,12 +547,12 @@ margin: 0 3px;
     top: 50%;
     left: 50%;
     width: 100vw ;
-    height: 600%;
+    height: 150vh;
     
     background:no-repeat url(pic/back-img/back-img02.jpg) ;
-    background-position: bottom center;
-    background-size: left;
-    transform: translateX(-50%) translateY(-45%);
+    background-position: bottom left;
+    /* background-size: left; */
+    transform: translateX(-50%) translateY(-50%);
     position: absolute;
 
     z-index: 1;
@@ -641,7 +641,10 @@ margin: 0 3px;
     border-radius: 50%;
     background: linear-gradient(180.39deg, #FAC766 71.77%, rgba(250, 199, 102, 0) 106.36%);
     z-index: 1;
+    
+    animation: baloon_1 7s infinite;
 }
+
 .round-1{
     position: absolute;
     width: 840px;
@@ -651,7 +654,12 @@ margin: 0 3px;
     border-radius: 50%;
     background: linear-gradient(180.39deg, #FAC766 71.77%, rgba(250, 199, 102, 0) 106.36%);
     z-index: 1;
+    
+    animation: baloon_1 5s infinite;
 }
+
+
+
 
 .bc1,.bc1-1,.bc1-2{
     width: 100%;
@@ -866,6 +874,22 @@ input[name="color"] + span{
     .slogans{justify-content: center;}
     .slogan{text-align: center;}
 
+    .bags-wrap .swiper{min-width: calc(100vw);}
+    .clothes-pic{
+        position: absolute;
+        top: 0;
+    }
+    .bag-copywriting h2,.clothes-copywriting h2{
+        font-size: 28px;
+        transition: 1s;
+    }
+    .bag-copywriting h2 img,.clothes-copywriting img{
+        width: 22px;
+        transition: 1s;
+    }
+    .container.bag{
+        margin-top: 200px;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -883,7 +907,26 @@ input[name="color"] + span{
     }
     .bags-wrap .swiper{min-width: calc(100vw);}
 
+    .md-position-r{position: relative;}
     
+    .clothes-pic{
+        display: none;
+    }
+
+    .bag-copywriting h2,.clothes-copywriting h2{
+        font-size: 36px;
+        transition: 1s;
+    }
+    .bag-copywriting h2 img,.clothes-copywriting img{
+        width: 24px;
+        transition: 1s;
+    }
+
+
+    .container.bag{
+        margin-top: 200px;
+    }
+
     /* width: calc( 100% + 50vw - 600px ); */
     
 }
@@ -894,6 +937,17 @@ input[name="color"] + span{
         padding: 20px 0;
         filter:drop-shadow(-5px 5px 3px rgba(0,0,0,.5));
     }
+
+    .bag-copywriting h2,.clothes-copywriting h2{
+        font-size: 36pt;
+        transition: 1s;
+    }
+    .bag-copywriting h2 img,.clothes-copywriting img{
+        width: 33px;
+        transition: 1s;
+    }
+
+
 
 
 }
@@ -913,4 +967,12 @@ input[name="color"] + span{
         filter:drop-shadow(-5px 5px 3px rgba(0,0,0,.5));
     }
     .bags-wrap .swiper{min-width: calc( 780px + 50vw - 600px );}
+    .md-position-r{position: static;}
+
+    .clothes-pic{
+        display: flex;
+    }
+    .container.bag{
+        margin-top: 100px;
+    }
 }
