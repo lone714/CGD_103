@@ -1,23 +1,37 @@
+
+
 .clothing_case{
+    min-height: 300px;
     padding-top: 100px;
     position: relative;
     z-index: 50;
 }
 
 .clothing-case h2{
+    display: inline-block;
     margin: 20px 0;
-   
     font-size: 30px;
     color: #D9D9D9;
 }
 
-.pic img{
+.clothing_case .pic{
+    min-height: 300px;
     width: 100%;
 }
-.clothing_emulator .row{
+.clothing_case .pic img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container.clothing .row{
     justify-content: center;
     position: relative;
     z-index: 50;
+}
+
+.clothing_emulator img{
+    vertical-align: middle;
 }
 
 .clothing_emulator-present,
@@ -237,14 +251,27 @@ input[type="range"]{
     font-size: 16px;
 
 }
-
-
-
 .form-check{
     display: flex;
 }
 
 
+.Inquiry::after{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background:url(pic/back-img/back-img03.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transition: .5s;
+    z-index: -1;
+}
 .Inquiry{
     position: relative;
     margin-top: 450px;
@@ -252,7 +279,7 @@ input[type="range"]{
     color: #fff;
     filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
     
-    z-index: 50;
+    z-index: 55;
 }
 
 .Inquiry h2{
@@ -264,11 +291,13 @@ input[type="range"]{
 
 
 .choose{
+    position: relative;
     padding: 10px 30px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    z-index: 55;
 }
 
 .choose svg{
@@ -279,6 +308,16 @@ input[type="range"]{
     padding: 0 20px;
     font-size: 20pt;
 }
+
+
+.choose select{
+    padding: 5px;
+    background-color: #eee;
+}
+.choose select option{
+    padding: 5px;
+}
+    
 
 .inquiry-button::after{
     content: "";
@@ -321,4 +360,60 @@ input[type="range"]{
     color: #4C4948;
     font-weight: 600;
     line-height: 1.5;
+}
+
+
+
+
+@media screen and (max-width:747px) {
+    .clothing_case .pic{
+        display: none;
+    }
+}
+@media screen and (min-width:748px) {
+    .clothes-wrap .swiper{
+        width: calc(100%);
+
+    }
+    .clothing_case .pic{
+        display: none;
+    }
+}
+@media screen and (min-width:1024px) {
+
+    .clothes-wrap .swiper{
+        left: 15px;
+        width: calc(75% - 30px);
+    }
+    .clothing_case .pic{
+        display: block;
+    }
+
+}
+@media screen and (min-width:1200px) {
+
+    .clothes-wrap .swiper{
+        left: 15px;
+        width: calc(75% - 30px);
+    }
+
+    .clothing_emulator-present,
+    .clothing_emulator-control{
+        width: 100%;
+        /* height: 558px; */
+        padding: 20px;
+        padding-top: 30px;
+        border-radius: 28px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #B0B0B0;
+        position: relative;
+
+        filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+
+
 }

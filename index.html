@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="grid.css">
-    
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     
     <title>新衣袋-New Clothes Bag</title>
+    <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./index.js"></script>
 </head>
 <body>
@@ -33,7 +33,7 @@
                 <span></span>
             </label>
             
-            <nav class="main-nav">
+            <nav class="main-nav" title="導覽列">
                 <ul class="menu">
                     <li>
                         <a href="./custom_clothing_emulator.html">客製化衣服 &or;</a>
@@ -81,8 +81,10 @@
     <section class="container">
         <div class="row slogans">
             <div class="slogan">
-                <p>放入喜歡的圖樣</p>
-                <p>建立屬於你的品牌</p>
+                <h2>
+                    <p>放入喜歡的圖樣</p>
+                    <p>建立屬於你的品牌</p>
+                </h2>
                 <div class="totem">
                     <img src="./pic/icon/totem.svg" alt="【New Clothes Bag】參考圖騰">
                 </div>
@@ -111,7 +113,7 @@
         <div class="row md-position-r">
             <div class="col-md-12 col-xl-8 clothes">
                 <div class="clothes-block">
-                    <div class="clothes-copywriting">
+                    <div class="clothes-copywriting fadeUp">
                         <a href="./custom_clothing_emulator.html" title="前往客製衣服模擬器">
                             <h2><img src="./pic/icon/link-R.svg" alt="【New Clothes Bag】客製衣服">製作專屬於自己的衣服</h2>
                         </a>
@@ -121,7 +123,7 @@
                     </div>
                         <div class="clothes-wrap">
                             <div class="swiper mySwiper">
-                                <div class="clothes-swiper-wrapper">
+                                <div class="clothes-swiper-wrapper fadeLeft">
                                     <div class="swiper-slide">
                                         <a href="./custom_clothing_case_demo_01.html">
                                             <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
@@ -153,17 +155,14 @@
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
-                                <div id="clothesLeft" class="more">
+                                <div id="clothesLeft" class="more fadeLeft">
                                     <img src="./pic/icon/link-R.svg" alt="看更多客製化衣服" title="看更多客製化衣服">
                                 </div>
                             </div>
                         </div>
-                        
-
-                    </a>
                 </div>
             </div>
-            <div  class="col-mi-4 col-md-4 col-xl-4 clothes-pic">
+            <div  class="col-mi-4 col-md-4 col-xl-4 clothes-pic fadeRight">
                 <a href="custom_clothing_case.html">
                     <img src="./pic/home/clothes/clothes-528px-0.png" alt="客製化衣服範例">
                 </a>
@@ -177,7 +176,7 @@
         <div class="row md-position-r">
             <div class="col-md-12 col-xl-8 bag">
                 <div class="bag-block">
-                    <div class="bag-copywriting">
+                    <div class="bag-copywriting fadeUp">
                         <a href="./custom_clothing_emulator" title="前往紙袋模擬器">
                             <h2><img src="./pic/icon/link-R.svg" alt="客製紙袋">製作專屬於自己的紙袋</h2>
                         </a>
@@ -187,7 +186,7 @@
                     </div>
                         <div class="bags-wrap">
                             <div class="swiper mySwiper">
-                                <div class="bags-swiper-wrapper">
+                                <div class="bags-swiper-wrapper fadeRight">
                                     <div class="swiper-slide">
                                         <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
                                     </div>
@@ -214,37 +213,36 @@
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
-                                <div id="boxsLeft" class="more">
+                                <div id="boxsLeft" class="more fadeRight">
                                     <img src="./pic/icon/link-R.svg" alt="看更多客製化紙袋" title="看更多客製化紙袋">
                                 </div>
                             </div>  
                         </div>
                 </div>
             </div>
-            <div class="col-mi-4 col-md-4 col-xl-4 clothes-pic">
+            <div class="col-mi-4 col-md-4 col-xl-4 clothes-pic fadeLeft">
                 <img src="./pic/home/bags/bag-01.png" alt="客製化紙袋範例">                
             </div>
             
         </div>
     </section>
 
-
-
-
-    <aside class="container guideSlogan">
-        <div class="row guideSlogan1">
-            <p class="">不知道如何設計，只有<span>模糊的概念</span> ?</p>
+    <section class="guideSlogan-boundary">
+        <div class="guideSlogan1 fadeUp">
+            <p>不知道如何設計，</p>
+            <p>只有<span>模糊的概念</span>?</p>
         </div>
-        <div class="row guideSlogan2">
-            <div class="col-12">
-                <p>歡迎聯絡我們，</p>
-                <p><span>專業設計團隊</span>為您服務。</p>
+    </section>
+    <div class="guideSlogan-bc">
+        <div class="container">
+            <div class="row guideSlogan2">
+                <div class="col-12">
+                    <p>歡迎聯絡我們，</p>
+                    <p><span>專業設計團隊</span>為您服務。</p>
+                </div>
             </div>
         </div>
-    </aside>
-
-
-  
+    </div>
 
     <div class="to-top"><a href="#"><img src="./pic/icon/up.svg" alt=""></a></div>
 
@@ -269,19 +267,25 @@
             <div class="row">
                 
                 <div class="col-10 col-md-10">
-                    <div class="contactUs row row-cols-xl-3 row-cols-md-3">
+                    <div class="contactUs row row-cols-3 row-cols-mi-3">
                         <div class="col">
                             <div class="contactUs-card">
                                 <div>
                                     <a class="item" href="#">
                                         <div>
-                                            <img class="icon" src="pic/icon/fb.svg" alt="fb">
+                                            <div class="icon">
+                                                <img src="pic/icon/fb.svg" alt="fb">
+                                            </div>
                                             <div class="contactUs-card-service">
-                                                <p>09:30~17:30</p>
-                                                <p>真人客服</p>
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
                                                 <span></span>
-                                                <p>17:30~</p>
-                                                <p>常見QA自動回覆</p>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="QR">
@@ -296,13 +300,19 @@
                                 <div>
                                     <a class="item" href="#">
                                         <div>
-                                            <img class="icon" src="pic/icon/line.svg" alt="line">
+                                            <div class="icon">
+                                                <img class="icon" src="pic/icon/line.svg" alt="line">
+                                            </div>
                                             <div class="contactUs-card-service">
-                                                <p>09:30~17:30</p>
-                                                <p>真人客服</p>
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
                                                 <span></span>
-                                                <p>17:30~</p>
-                                                <p>常見QA自動回覆</p>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="QR">
@@ -317,13 +327,19 @@
                                 <div>
                                     <a class="item" href="#">
                                         <div>
-                                            <img class="icon" src="pic/icon/ig.svg" alt="ig">
+                                            <div class="icon">
+                                                <img class="icon" src="pic/icon/ig.svg" alt="ig">
+                                            </div>
                                             <div class="contactUs-card-service">
-                                                <p>09:30~17:30</p>
-                                                <p>真人客服</p>
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
                                                 <span></span>
-                                                <p>17:30~</p>
-                                                <p>常見QA自動回覆</p>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="QR">
@@ -335,7 +351,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" col-6 col-md-6 col-md-8">
+                <div class="col-lg-6 col-md-10 col-mi-10">
                     <ul class="footer-wrap row">
                         <li class="col-3">
                             <a href="./custom_clothing_emulator.html">客製化衣服</a>
@@ -378,6 +394,21 @@
         </div> 
     </footer>
 
+    <script>
+        //     let oth = $(window).innerHeight();
+        // $(window).scroll(function(){
+        //     let sct = $(this).scrollTop().top-50;
+        //     let all = sct+oth;
+        //     $(".fadeIn").each(function(){
+        //         let sld = $(this).offset().top;
+        //         if(all >sld){
+        //             $(this).addClass("fadeDown");
+        //         }else{
+
+        //         }
+        //     });
+        // });
+    </script>
 
 </body>
 </html>

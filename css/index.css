@@ -20,6 +20,7 @@ hearder1000~
 }
 @media screen and (min-width:1024px) {
     :root{
+        --windor-Width:calc(100% +100vw -1200px);
     }
 }
 @media screen and (min-width:1200px) {
@@ -49,19 +50,26 @@ hearder1000~
 }
 
 html {
+    min-height: 100%;
+    margin: 0;
     overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
 /* 共通設定 */
 
+
+
 .father{
 overflow-y:overlay;
 }
 body{
+    min-height: 100%;
+    margin: 0;
     font-family:sans-serif, arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
 }
+
 
 h2{
     font-size: 36pt;
@@ -111,6 +119,10 @@ a:visted { color: #ff8849 ; }
     z-index: 35;
     padding:5px 5em;
     text-align: center;
+}
+
+.active{
+    transform: translateX(50%);
 }
 
 .slogan p{
@@ -166,27 +178,27 @@ a:visted { color: #ff8849 ; }
 }
 
 .banner .slide:nth-of-type(1){
-    background: url(./pic/banner/banner-1.jpg);
+    background: url(../pic/banner/banner-1.jpg);
     max-width:800px;
     background-position: right;
     width: 100%;
 }
 .banner .slide:nth-of-type(2){
-    background: url(./pic/banner/banner-2.jpg);
+    background: url(../pic/banner/banner-2.jpg);
     max-width:800px;
     background-position: center;
     width: 100%;
     left: 100%;
 }
 .banner .slide:nth-of-type(3){
-    background: url(./pic/banner/banner-1.jpg);
+    background: url(../pic/banner/banner-1.jpg);
     max-width:800px;
     background-position: right;
     width: 100%;
     left: 200%;
 }
 .banner .slide:nth-of-type(4){
-    background: url(./pic/banner/banner-2.jpg);
+    background: url(../pic/banner/banner-2.jpg);
     max-width:800px;
     background-position: center;
     width: 100%;
@@ -251,7 +263,6 @@ margin: 0 3px;
     z-index: 32;
     margin-top: 40px;
     margin-bottom: 40px;
-
     box-sizing: border-box;
 }
 .clothes-block{
@@ -305,6 +316,9 @@ margin: 0 3px;
     filter:drop-shadow(-2px 2px 3px #00000050);
 }
 .clothes-pic{
+    max-width: 90%;
+    padding-left: 0;
+    padding-right: 0;
     height: auto;
     z-index: 32;
 }
@@ -328,7 +342,7 @@ margin: 0 3px;
     z-index: 50;
 }
 .clothes-wrap .swiper {
-    min-width: calc( 780px + 50vw - 600px  );
+    width: calc( 770px + 50vw - 617px - 14px);
     width: calc(100vw);
     height: 200px;
     right: 0px;
@@ -342,7 +356,7 @@ margin: 0 3px;
     right: -10px;
     flex-direction: row-reverse;
     position: absolute;
-    transition: transform 1s;
+    transition: transform .7s;
     transform: translate(0px);
 }
 
@@ -373,6 +387,7 @@ margin: 0 3px;
 
 /* 客製化紙袋 */
 .bag{
+    box-sizing: border-box;
     z-index: 32;
 }
 .bag .row{
@@ -392,6 +407,7 @@ margin: 0 3px;
     display: inline;
     margin: 20px 0;
     font-size: 36pt;
+    line-height: 1.5;
     color: #4C4948;
     text-decoration:none;
 
@@ -414,7 +430,6 @@ margin: 0 3px;
     display: block;
     width: 100%;
     height: 2px;
-    /* margin: 20px; */
     background-color: #666464;
 }
 .bag-copywriting p{
@@ -452,7 +467,7 @@ margin: 0 3px;
 
 
 .bags-wrap .swiper{
-    width: calc( 780px + 50vw - 600px + 7px);
+    width: calc( 770px + 50vw - 617px - 14px);
     height: 200px;
     /* left: 20px; */
     position: absolute;
@@ -465,7 +480,7 @@ margin: 0 3px;
     left: -10px;
     flex-direction: row;
     position: absolute;
-    transition: transform 1s;
+    transition: transform .7s;
     transform: translateX(0px);
 
 }
@@ -491,10 +506,15 @@ margin: 0 3px;
 
 /* 模糊的概念 */
 
+.guideSlogan-boundary{
+    width: 100%;
+    text-align: center;
+}
+
 
 .guideSlogan1{
-    margin-top: 450px;
-    margin-bottom: 250px;
+    margin-top: 400px;
+    margin-bottom: 50px;
     justify-content: center;
     position: relative;
     z-index: 40;
@@ -502,22 +522,27 @@ margin: 0 3px;
 
 .guideSlogan1::after{
     content: "";
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     position: absolute;
-    width: calc(100vw);
+    width: 100%;
     height: 300px;
     background: linear-gradient(15deg, #E2AD49 0%, #FAC766 100%);
-    transform: translateX(-50%) translateY(-50%) skewY(15deg);
+    transform: skewY(15deg);
     transform-origin:center;
  
     z-index: 5;
  
  }
 .guideSlogan1 p{
+    display: inline-block;
+    text-align: left;
     font-weight: 600;
-    text-align: center;
     font-size: 30px;
+    line-height: 1.5;
     color: #666464;
     position: relative;
     /* overflow: hidden; */
@@ -534,30 +559,23 @@ margin: 0 3px;
 }
 
 
-.guideSlogan2{
+.guideSlogan-bc .container .row{
     display: block;
-    margin: 350px auto;
-    /* margin-left: 50px; */
+    margin: 350px auto 350px 50px;
     /* margin-bottom: 200px; */
     position: relative;
     z-index: auto;
 }
-.guideSlogan2::after{
-    content: "";
-    top: 50%;
-    left: 50%;
-    width: 100vw ;
-    height: 150vh;
-    
-    background:no-repeat url(pic/back-img/back-img02.jpg) ;
-    background-position: bottom left;
-    /* background-size: left; */
-    transform: translateX(-50%) translateY(-50%);
-    position: absolute;
 
+.guideSlogan-bc{
+    width: 100%;
+    height: 100%;
     z-index: 1;
+    background-color: #fff;
+    overflow: hidden;
+    background:no-repeat url(../pic/back-img/back-img02.jpg) ;
+    background-position: bottom left;
 }
-
 .guideSlogan2 p,.guideSlogan3 p{
     
     line-height: 1.7em;
@@ -643,6 +661,7 @@ margin: 0 3px;
     z-index: 1;
     
     animation: baloon_1 7s infinite;
+    animation-delay: .7s;
 }
 
 .round-1{
@@ -655,7 +674,8 @@ margin: 0 3px;
     background: linear-gradient(180.39deg, #FAC766 71.77%, rgba(250, 199, 102, 0) 106.36%);
     z-index: 1;
     
-    animation: baloon_1 5s infinite;
+    animation: baloon_1 7s infinite;
+    animation-delay: .7s;
 }
 
 
@@ -669,7 +689,7 @@ margin: 0 3px;
     transform-origin:left;
     transform:skewY(-15deg);
     position: absolute;
-
+    transition: .5s;
     z-index: 4;
 }
 
@@ -678,6 +698,7 @@ margin: 0 3px;
     top: 900px;
     transform:skewY(15deg);
     transform-origin:right;
+    transition: .5s;
 }
 
 .bc1-2{
@@ -686,6 +707,7 @@ margin: 0 3px;
     background: linear-gradient(15deg, #FFDB98 0%, #FAC766 100%);
     transform:skewY(15deg);
     transform-origin:right;
+    transition: .5s;
 }
 
 
@@ -697,12 +719,13 @@ margin: 0 3px;
     transform-origin:left;
     transform:skewY(-15deg);
     position: absolute;
-
+    transition: .5s;
     z-index: 3;
 }
 .bc2-1{
     top: 900px;
     height: 800px;
+    transition: .5s;
 }
 
 .bc3{
@@ -713,7 +736,7 @@ margin: 0 3px;
     transform-origin:left;
     transform:skewY(15deg);
     position: absolute;
-
+    transition: .5s;
     z-index: 4;
 }
 
@@ -726,7 +749,7 @@ margin: 0 3px;
     transform-origin:left;
     transform:skewY(15deg);
     position: absolute;
-
+    transition: .5s;
     z-index: 2;
 }
 .bc4-1{
@@ -739,7 +762,7 @@ margin: 0 3px;
     bottom: -1600px;
     background:#D9D9D9;
     position: absolute;
-
+    transition: .5s;
     z-index: 1;
 }
 
@@ -753,17 +776,11 @@ margin: 0 3px;
     background-size: cover;
     background-position: left bottom;
     position: absolute;
-
+    transition: .5s;
     z-index: 1;
     
 }
-.bc6-1{
-    top: 900px;
-    height: 2000px;
-    bottom: auto;
-    background:no-repeat url(pic/back-img/back-img03.jpg) ;
-    background-position: center top;
-}
+
 .bc6-2{
     top: 1230px;
     width: 100%;
@@ -776,7 +793,9 @@ margin: 0 3px;
 
 
 /* ------顏色 */
-
+.radio label span:checked[name="color"] + span{
+    outline: 3px solid #FFB800;
+}
 input[name="color"] + span{
     display: inline-block;
     width: 30px;
@@ -794,9 +813,8 @@ input[name="color"] + span{
     outline: 3px solid #4C4948;
 }
 #color2{
-    background: #FFFFFF;
-    /* border: 3px solid #FFB800 ; */
-    outline: 3px solid #FFB800;
+    background: #ffffff;
+    outline: 3px solid #ffffff;
     outline-offset: -3px;
 }
 #color3{
@@ -831,14 +849,14 @@ input[name="color"] + span{
     background: #006A37;
     outline: 3px solid #006A37;
 }
-
+.radio label span:checked{
+    outline: 3px solid #FFB800;
+}
 
 .color{
     position: relative;
     z-index: 50;
 }
-
-
 
 .clothing_case{
     padding-top: 100px;
@@ -847,37 +865,13 @@ input[name="color"] + span{
 }
 
 
-/* @keyframes AppearUp{
-    0% {
-        opacity: 0;
-        transform: perspective(600px) rotateX(0deg);
-        transform-origin: center top;
-        -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
-        animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
-    }
-    50% {
-        transform: perspective(600px) rotateX(-10deg);
-        transform-origin: center top;
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    100% {
-        opacity: 1;
-        transform: perspective(600px) rotateX(0deg);
-        transform-origin: center top;
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-} */
-
 @media screen and (max-width:767px) {
     .slogans{justify-content: center;}
     .slogan{text-align: center;}
 
-    .bags-wrap .swiper{min-width: calc(100vw);}
+    .bags-wrap .swiper{width: calc(100% - 16px);}
     .clothes-pic{
-        position: absolute;
-        top: 0;
+        display: none;
     }
     .bag-copywriting h2,.clothes-copywriting h2{
         font-size: 28px;
@@ -885,11 +879,12 @@ input[name="color"] + span{
     }
     .bag-copywriting h2 img,.clothes-copywriting img{
         width: 22px;
-        transition: 1s;
+        transition: .7s;
     }
     .container.bag{
         margin-top: 200px;
     }
+    .round{right: 70%;}
 }
 
 @media screen and (min-width:768px) {
@@ -905,7 +900,7 @@ input[name="color"] + span{
         color: #FAC766;
 
     }
-    .bags-wrap .swiper{min-width: calc(100vw);}
+    .bags-wrap .swiper{width: calc(100% - 17px);}
 
     .md-position-r{position: relative;}
     
@@ -915,20 +910,20 @@ input[name="color"] + span{
 
     .bag-copywriting h2,.clothes-copywriting h2{
         font-size: 36px;
-        transition: 1s;
+        transition: .7s;
     }
     .bag-copywriting h2 img,.clothes-copywriting img{
         width: 24px;
-        transition: 1s;
+        transition: .7s;
     }
 
 
     .container.bag{
         margin-top: 200px;
     }
-
-    /* width: calc( 100% + 50vw - 600px ); */
-    
+    .guideSlogan1{
+        margin-top: 550px;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -940,16 +935,12 @@ input[name="color"] + span{
 
     .bag-copywriting h2,.clothes-copywriting h2{
         font-size: 36pt;
-        transition: 1s;
+        transition: .7s;
     }
     .bag-copywriting h2 img,.clothes-copywriting img{
         width: 33px;
-        transition: 1s;
+        transition: .7s;
     }
-
-
-
-
 }
 
 @media screen and (min-width:1200px) {
@@ -966,7 +957,10 @@ input[name="color"] + span{
         padding: 20px 0;
         filter:drop-shadow(-5px 5px 3px rgba(0,0,0,.5));
     }
-    .bags-wrap .swiper{min-width: calc( 780px + 50vw - 600px );}
+
+    .bags-wrap .swiper{width: calc( 780px + 50vw - 600px );}
+    .clothes-wrap .swiper{width: calc( 780px + 50vw - 600px );}
+
     .md-position-r{position: static;}
 
     .clothes-pic{
@@ -975,4 +969,56 @@ input[name="color"] + span{
     .container.bag{
         margin-top: 100px;
     }
+
+    .guideSlogan1{
+        margin-top: 300px;
+    }
+}
+
+
+
+/* ========= */
+
+.fadeUp{
+    opacity:0;
+    transform: translateY(100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+    
+
+.fadeUpOn{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s;
+    
+}
+
+
+.fadeLeft{
+    opacity:0;
+    transform: translateX(-100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+    
+
+.fadeLeftOn{
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s;
+}
+
+.fadeRight{
+    opacity:0;
+    transform: translateX(100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+    
+
+.fadeRightOn{
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s;
 }
