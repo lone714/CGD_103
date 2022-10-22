@@ -1,5 +1,247 @@
+/* ------共用------ */
 
-.bc0,.bc0-1,.bc0-2{
+/* 共通設定 */
+
+
+@media screen and (max-width:747.98px) {
+    :root{
+        --windor-Width:calc(120vw + 10px);
+    }
+}
+@media screen and (min-width:748px) {
+    :root{
+        --windor-Width:calc(120vw + 10px);
+    }
+}
+@media screen and (min-width:1024px) {
+    :root{
+        --windor-Width:calc(100% +100vw -1200px);
+    }
+}
+@media screen and (min-width:1200px) {
+    :root{
+        --windor-Width:calc(100% +100vw -1200px);
+    }
+
+
+
+}
+
+:root{
+    --swiper-theme-color:#FAC766;
+    /* --windor-Width:calc(100% +100vw -1200px); */
+}
+
+::-webkit-scrollbar{
+    /* display: none; */
+    width: 10px;
+    width: calc();
+    background-color: #D9D9D9;
+  }
+::-webkit-scrollbar-thumb
+{
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+html {
+    /* 錨點移動 */
+    scroll-behavior: smooth;
+
+    min-height: 100%;
+    margin: 0;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+
+}
+
+
+
+.father{
+    overflow-y:overlay;
+}
+body{
+    
+
+    background-color: #D9D9D9;
+    min-height: 100%;
+    margin: 0;
+    font-family:sans-serif, arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
+}
+
+
+h2{
+    font-size: 36pt;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    color: #FF612F;
+    transition: .3s;
+}
+a:visited{
+    color: #FF612F;
+    text-decoration:none;
+}
+
+h1 p{
+    display: none;
+}
+
+a:link { color: #FAC766; }
+a:visted { color: #ff8849 ; }
+
+.overflow-h{overflow: hidden;}
+.text-align-c{text-align: center;}
+
+::selection {
+    background: #FF612F;
+    color: #fff;
+}
+::-moz-selection {
+    background: #FF612F;
+    color: #fff;
+}
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
+    
+/* --按鈕-- */
+button{
+    background:  #4C4948;
+    border: none;
+    color: #FAC766;
+    padding: 1rem 2rem  ;
+    margin: 10px 0px;
+
+    border-radius: 4px;
+    
+    display: flex;
+    vertical-align: bottom;
+    user-select: none;
+    font-size: 16px;
+
+}
+
+/* --多選按鈕-- */
+
+label {
+    padding: 0;
+    margin-right: 15px;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox]+span {
+    display: inline-block;
+    background-color: #eee;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    border: 2px solid #9d9d9d;
+    border-radius: 5px;
+    color: #eee;
+    user-select: none; /* 防止文字被滑鼠選取反白 */
+}
+
+input[type=checkbox]:checked+span {
+    color: #FAC766;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    /* vertical-align: middle; */
+    background-color: #4C4948;
+    border: 2px solid #9d9d9d;
+}
+
+
+/* --到最上面-- */
+.to-top{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    filter:drop-shadow(-2px 2px 3px #00000050);
+    z-index: 999;
+    transition: .7s;
+
+    animation: baloon_3 .5s ease-in-out infinite alternate paused;
+}
+
+.to-top:hover{
+    animation: baloon_3 .5s ease-in-out infinite alternate ;
+    
+}
+
+
+/* 實做案例 */
+
+
+.clothes-wrap{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    z-index: 50;
+}
+.clothes-wrap .swiper {
+    width: calc( 770px + 50vw - 617px - 14px);
+    width: calc(100vw);
+    height: 200px;
+    right: 0px;
+    position: absolute;
+    overflow: hidden;
+
+}
+.clothes-swiper-wrapper{
+    width:1980px;
+    display: flex;
+    right: -10px;
+    flex-direction: row-reverse;
+    position: absolute;
+    transition: transform .7s;
+    transform: translate(0px);
+}
+
+.swiper-slide {
+    width: 200px;
+    margin: 0 10px;
+
+}
+.swiper-slide img {
+    background-color: #eee;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.more{
+    position: absolute;
+    bottom: 3px;
+    right:6px;
+
+    z-index: 30;
+}
+.more img{
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* --背景色塊與圖示-- */
+
+.bc0,.bc0-1{
     position: absolute;
     top: 0;
     width: 100%;
@@ -10,20 +252,15 @@
     /* clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 100%); */
     z-index: 1;
 }
-.bc0{
-    
-}
+
 .bc0-1{
     background:no-repeat url(../pic/back-img/back-img01-1.jpg),
     linear-gradient(0deg, #666464 0%, #4C4948 100%);
     
     overflow: hidden;
 }
-.bc0-2{
-    overflow: hidden;
-    background:
-    linear-gradient(0deg, #666464 0%, #4C4948 100%);
-}
+
+/* --背景半透明圓形-- */
 
 .round{
     position: absolute;
@@ -166,3 +403,149 @@
 }
 
 
+
+
+
+/* ------顏色單選按紐------ */
+.radio label span:checked[name="color"] + span{
+    outline: 3px solid #FFB800;
+}
+input[name="color"] + span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 4px;
+    background: #000;
+    outline: 3px solid ;
+    outline-offset: -3px;
+    cursor: pointer;
+}
+
+#color1{
+    background: #4C4948;
+    outline: 3px solid #4C4948;
+}
+#color2{
+    background: #ffffff;
+    outline: 3px solid #ffffff;
+    outline-offset: -3px;
+}
+#color3{
+    background: #E20000;
+    outline: 3px solid #E20000;
+}
+#color4{
+    background: #4428B4;
+    outline: 3px solid #4428B4;
+}
+#color5{
+    background: #FFB800;
+    outline: 3px solid #FFB800;
+}
+#color6{
+    background: #299fff;
+    outline: 3px solid #299fff;
+}
+#color7{
+    background: #9e9e9e;
+    outline: 3px solid #9e9e9e;
+}
+#color8{
+    background: #ff9114;
+    outline: 3px solid #ff9114;
+}
+#color9{
+    background: #fcee50;
+    outline: 3px solid #fcee50;
+}
+#color10{
+    background: #006A37;
+    outline: 3px solid #006A37;
+}
+.radio label span:checked{
+    outline: 3px solid #FFB800;
+}
+
+.color{
+    position: relative;
+    z-index: 50;
+}
+
+.clothing_case{
+    padding-top: 100px;
+    position: relative;
+    z-index: 50;
+}
+
+
+
+
+
+
+/* =====進來的動態效果===== */
+
+.fadeUp{
+    opacity:0;
+    transform: translateY(100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+    
+
+.fadeUpOn{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s;
+    
+}
+
+
+.fadeLeft{
+    opacity:0;
+    transform: translateX(-100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+    
+
+.fadeLeftOn{
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s;
+}
+
+.fadeRight{
+    opacity:0;
+    transform: translateX(100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+    
+
+.fadeRightOn{
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s;
+}
+
+
+
+/* =====動態腳本===== */
+
+/* 上下飄動 */
+
+@keyframes baloon_1{
+      0% {transform:translateY(20px);}
+     50% {transform:translateY(50px);}
+    100% {transform:translateY(20px);}
+}
+@keyframes baloon_2{
+      0% {transform:translateY(-45%);}
+     50% {transform:translateY(-50%);}
+    100% {transform:translateY(-45%);}
+}
+@keyframes baloon_3{
+      0% {transform:translateY(0%);}
+    100% {transform:translateY(-20%);}
+}

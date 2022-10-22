@@ -30,9 +30,19 @@
     z-index: 50;
 }
 
-.clothing_emulator img{
+.clothing_emulator{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.clothing_emulator canvas{
+    padding-top: 106px;
+    border-radius: 0 0 28 28px;
+    
     vertical-align: middle;
 }
+
 
 .clothing_emulator-present,
 .clothing_emulator-control{
@@ -94,8 +104,8 @@
 .clothing_emulator-background{
     
     vertical-align: middle;
-    /* background: url(./pic/clothing_emulator/clothing_emulator-background.jpg); */
-    
+
+   
     border-radius:0 0 28px 28px;
 }
 
@@ -135,7 +145,7 @@
 
 .pic_location button,
 .B-pic_location button{
-    background: url("./pic/icon/upload.svg")no-repeat , #4C4948;
+    background: url(../pic/icon/upload.svg)no-repeat , #4C4948;
     background-position: center ;
     border: none;
     padding: 1.5rem 2rem  ;
@@ -204,26 +214,28 @@ input[type="range"]{
 }
 
 
-.clothing_emulator-caption{
+.clothing-emulator-caption{
     text-align: justify;
     padding: 20px 0px;
     justify-content: center;
     color: #666464;
     
 }
-.clothing_emulator-caption h2{
+.clothing-emulator-caption h2{
     font-size: 30pt;
     text-align: center;
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #fff;
 }
-.clothing_emulator-caption .caption p{
-
+.clothing-emulator-caption .caption p{
+    padding: 5px;
     font-size: 12pt;
 }
-.clothing_emulator-caption .caption .form-check input p{
+
+.clothing-emulator-caption .caption .form-check input p{
     display: inline-block;
+    vertical-align: middle;
     text-align: left;
     font-size: 10pt;
 
@@ -234,10 +246,10 @@ input[type="range"]{
     align-items: center;
     flex-direction: row;
 }
-.clothing_emulator-caption button p{
+.clothing-emulator-caption button p{
     padding: right 5px; ;
 }
-.clothing_emulator-caption button{
+.clothing-emulator-caption button{
     background:  #4C4948;
     border: none;
     color: #FAC766;
@@ -265,7 +277,7 @@ input[type="range"]{
     left: 0;
     bottom: 0;
     margin: auto;
-    background:url(pic/back-img/back-img03.jpg) ;
+    background:url(../pic/back-img/back-img03.jpg) ;
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -279,7 +291,7 @@ input[type="range"]{
     color: #fff;
     filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
     
-    z-index: 55;
+    z-index: auto;
 }
 
 .Inquiry h2{
@@ -314,10 +326,10 @@ input[type="range"]{
     padding: 5px;
     background-color: #eee;
 }
-.choose select option{
-    padding: 5px;
+
+.choose input{
+    padding: 10px;
 }
-    
 
 .inquiry-button::after{
     content: "";
@@ -365,12 +377,12 @@ input[type="range"]{
 
 
 
-@media screen and (max-width:747px) {
+@media screen and (max-width:767.98px) {
     .clothing_case .pic{
         display: none;
     }
 }
-@media screen and (min-width:748px) {
+@media screen and (min-width:767px) {
     .clothes-wrap .swiper{
         width: calc(100%);
 
@@ -413,6 +425,9 @@ input[type="range"]{
         position: relative;
 
         filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+    .clothing_emulator-present{
+        padding: 0;
     }
 
 

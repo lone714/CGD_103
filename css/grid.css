@@ -31,7 +31,7 @@
 .col-11{ width: 91.666666%; }
 .col-12{ width: 100%; }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:767.98px){
     .col-mi-1{ width: 8.333333%; }
     .col-mi-2{ width: 16.666666%; }
     .col-mi-3{ width: 25%; }

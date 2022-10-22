@@ -4,6 +4,7 @@
     padding-top: 100px;
     position: relative;
     z-index: 50;
+    margin-bottom: 200px;
 }
 
 
@@ -67,4 +68,20 @@
 
 .about-body-item p{
     flex-grow: 1;
+}
+
+/* 標語 */
+
+.guideSlogan{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+
+/* 背景 */
+
+.bc0{
+    overflow: hidden;
+    background:
+    linear-gradient(0deg, #666464 0%, #4C4948 100%);
 }

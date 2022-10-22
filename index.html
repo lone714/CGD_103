@@ -13,10 +13,10 @@
     
     <title>新衣袋-New Clothes Bag</title>
     <script src="./js/jquery-3.6.1.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="header-backglass"></div>
         <input type="checkbox" name="" id="menu-switch">
         <div class="container header">
@@ -188,7 +188,10 @@
                             <div class="swiper mySwiper">
                                 <div class="bags-swiper-wrapper fadeRight">
                                     <div class="swiper-slide">
-                                        <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
+                                        <img src="./pic/home/bags/bag-32-250px.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./pic/home/bags/bag-7-250px.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
@@ -200,13 +203,10 @@
                                         <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
+                                        <img src="./pic/home/bags/bag-32-250px.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
+                                        <img src="./pic/home/bags/bag-7-250px.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="./pic/home/bags/bag-11.png" alt="【New Clothes Bag】客製紙袋實作案例">
@@ -229,13 +229,15 @@
 
     <section class="guideSlogan-boundary">
         <div class="guideSlogan1 fadeUp">
-            <p>不知道如何設計，</p>
-            <p>只有<span>模糊的概念</span>?</p>
+            <a href="#guideSlogan2">
+                <p>不知道如何設計，</p>
+                <p>只有<span>模糊的概念</span>?</p>
+            </a>
         </div>
     </section>
     <div class="guideSlogan-bc">
         <div class="container">
-            <div class="row guideSlogan2">
+            <div id="guideSlogan2" class="row">
                 <div class="col-12">
                     <p>歡迎聯絡我們，</p>
                     <p><span>專業設計團隊</span>為您服務。</p>
@@ -244,7 +246,7 @@
         </div>
     </div>
 
-    <div class="to-top"><a href="#"><img src="./pic/icon/up.svg" alt=""></a></div>
+    <div class="to-top"><a href="#top"><img src="./pic/icon/up.svg" alt=""></a></div>
 
     <!-- 背景 -->
     <!-- 現階段用絕對定位，從最頂部定位下來，之後會用偽元素::after ::before，定位在物件上 -->
@@ -265,8 +267,7 @@
     <footer>
         <div class="container footer">
             <div class="row">
-                
-                <div class="col-10 col-md-10">
+                <div class="col-10 col-md-10 col-mi-11">
                     <div class="contactUs row row-cols-3 row-cols-mi-3">
                         <div class="col">
                             <div class="contactUs-card">
@@ -393,22 +394,6 @@
             </div>
         </div> 
     </footer>
-
-    <script>
-        //     let oth = $(window).innerHeight();
-        // $(window).scroll(function(){
-        //     let sct = $(this).scrollTop().top-50;
-        //     let all = sct+oth;
-        //     $(".fadeIn").each(function(){
-        //         let sld = $(this).offset().top;
-        //         if(all >sld){
-        //             $(this).addClass("fadeDown");
-        //         }else{
-
-        //         }
-        //     });
-        // });
-    </script>
 
 </body>
 </html>

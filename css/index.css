@@ -8,102 +8,6 @@ hearder1000~
 /* swiper修改 */
 
 
-@media screen and (max-width:747px) {
-    :root{
-        --windor-Width:calc(120vw + 10px);
-    }
-}
-@media screen and (min-width:748px) {
-    :root{
-        --windor-Width:calc(120vw + 10px);
-    }
-}
-@media screen and (min-width:1024px) {
-    :root{
-        --windor-Width:calc(100% +100vw -1200px);
-    }
-}
-@media screen and (min-width:1200px) {
-    :root{
-        --windor-Width:calc(100% +100vw -1200px);
-    }
-
-
-
-}
-
-:root{
-    --swiper-theme-color:#FAC766;
-    /* --windor-Width:calc(100% +100vw -1200px); */
-}
-
-::-webkit-scrollbar{
-    /* display: none; */
-    width: 10px;
-    width: calc();
-    background-color: #D9D9D9;
-  }
-::-webkit-scrollbar-thumb
-{
-    background-color: #F5F5F5;
-    border-radius: 10px;
-}
-
-html {
-    min-height: 100%;
-    margin: 0;
-    overflow-y: auto;
-    /* overflow-x: hidden; */
-
-}
-
-/* 共通設定 */
-
-
-
-.father{
-overflow-y:overlay;
-}
-body{
-    min-height: 100%;
-    margin: 0;
-    font-family:sans-serif, arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
-}
-
-
-h2{
-    font-size: 36pt;
-}
-a{
-    text-decoration:none;
-}
-
-h1 p{
-    display: none;
-}
-
-a:link { color: #FAC766; }
-a:visted { color: #ff8849 ; }
-
-.overflow-h{overflow: hidden;}
-.text-align-c{text-align: center;}
-
-::selection {
-    background: #FF612F;
-    color: #fff;
-    }
-    ::-moz-selection {
-    background: #FF612F;
-    color: #fff;
-    }
-    img::selection {
-    background: transparent;
-    }
-    img::-moz-selection {
-    background: transparent;
-    }
-
-
 
 /* 內頁開始 */
 
@@ -566,6 +470,9 @@ margin: 0 3px;
     position: relative;
     z-index: auto;
 }
+.guideSlogan-bc .container{
+    scroll-behavior: smooth;
+}
 
 .guideSlogan-bc{
     width: 100%;
@@ -576,7 +483,7 @@ margin: 0 3px;
     background:no-repeat url(../pic/back-img/back-img02.jpg) ;
     background-position: bottom left;
 }
-.guideSlogan2 p,.guideSlogan3 p{
+#guideSlogan2 p,.guideSlogan3 p{
     
     line-height: 1.7em;
     text-align: left;
@@ -590,10 +497,10 @@ margin: 0 3px;
     box-sizing: border-box;
     
 }
-.guideSlogan2 p + p{
+#guideSlogan2 p + p{
     text-indent: 1.5em;
 }
-.guideSlogan2 p span{
+#guideSlogan2 p span{
     background: linear-gradient(180deg,transparent 75%,#fdda5a 0);  
 }
 
@@ -609,98 +516,9 @@ margin: 0 3px;
 .guideSlogan{
     z-index: 50;
 }
-.to-top{
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    filter:drop-shadow(-2px 2px 3px #00000050);
 
 
-    z-index: 999;
-}
-
-.bc{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
-}
-
-/* ------顏色 */
-.radio label span:checked[name="color"] + span{
-    outline: 3px solid #FFB800;
-}
-input[name="color"] + span{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    border-radius: 4px;
-    background: #000;
-    outline: 3px solid ;
-    outline-offset: -3px;
-    cursor: pointer;
-}
-
-#color1{
-    background: #4C4948;
-    outline: 3px solid #4C4948;
-}
-#color2{
-    background: #ffffff;
-    outline: 3px solid #ffffff;
-    outline-offset: -3px;
-}
-#color3{
-    background: #E20000;
-    outline: 3px solid #E20000;
-}
-#color4{
-    background: #4428B4;
-    outline: 3px solid #4428B4;
-}
-#color5{
-    background: #FFB800;
-    outline: 3px solid #FFB800;
-}
-#color6{
-    background: #299fff;
-    outline: 3px solid #299fff;
-}
-#color7{
-    background: #9e9e9e;
-    outline: 3px solid #9e9e9e;
-}
-#color8{
-    background: #ff9114;
-    outline: 3px solid #ff9114;
-}
-#color9{
-    background: #fcee50;
-    outline: 3px solid #fcee50;
-}
-#color10{
-    background: #006A37;
-    outline: 3px solid #006A37;
-}
-.radio label span:checked{
-    outline: 3px solid #FFB800;
-}
-
-.color{
-    position: relative;
-    z-index: 50;
-}
-
-.clothing_case{
-    padding-top: 100px;
-    position: relative;
-    z-index: 50;
-}
-
-
-@media screen and (max-width:767px) {
+@media screen and (max-width:767.98px) {
     .slogans{justify-content: center;}
     .slogan{text-align: center;}
 
@@ -810,50 +628,3 @@ input[name="color"] + span{
     }
 }
 
-
-
-/* ========= */
-
-.fadeUp{
-    opacity:0;
-    transform: translateY(100px);
-    transition: .5s;
-    transition-delay: .5s;
-}
-    
-
-.fadeUpOn{
-    opacity: 1;
-    transform: translateY(0);
-    transition: .5s;
-    
-}
-
-
-.fadeLeft{
-    opacity:0;
-    transform: translateX(-100px);
-    transition: .5s;
-    transition-delay: .5s;
-}
-    
-
-.fadeLeftOn{
-    opacity: 1;
-    transform: translateX(0);
-    transition: .5s;
-}
-
-.fadeRight{
-    opacity:0;
-    transform: translateX(100px);
-    transition: .5s;
-    transition-delay: .5s;
-}
-    
-
-.fadeRightOn{
-    opacity: 1;
-    transform: translateX(0);
-    transition: .5s;
-}
