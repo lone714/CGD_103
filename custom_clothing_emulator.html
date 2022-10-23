@@ -143,7 +143,7 @@
     <section>
         <div class="container clothing">
             <div class="row">
-                <div class="col-xl-8 col-lg-8 ">
+                <div class="col-xl-8 col-lg-8 emulatorMonitor">
                     <div class="clothing_emulator-present">
                         <h2>線上客製衣服模擬器</h2>
                         <div class="clothing_emulator">
@@ -167,10 +167,9 @@
                             </div>
                         
                             <div class="form-check">
-                                <input type="checkbox" name="" id="form-check-share" checked>
-                                
-                                <span>&#10003</span>
                                 <label for="form-check-share">
+                                    <input type="checkbox" name="" id="form-check-share" checked>
+                                    <span>&#10003</span>
                                     <p>同意分享自己設計的衣服</p>
                                 </label>
                             </div>
@@ -244,7 +243,7 @@
 
                         <div class="pic_location">
                             <div class="button">
-                                <button></button>
+                                <button id="frontPic"></button>
                                 <div>
                                     <p>上傳正面圖樣</p>
                                     <p>限500x500px png檔案</p>
@@ -252,21 +251,21 @@
                             </div>
                             <label for="pic_size">
                                 <p>正面圖樣大小</p>
-                                <input type="range" id="pic_size" min="0" max="100" step="1">
+                                <input type="range" id="pic_size" min="1" max="100" step="1" value="70">
                                 <span id="pic_size-txt"></span>
                             </label>
                             <label for="pic_Y">
                                 <p>正面圖樣上下位置</p>
-                                <input type="range" id="pic_Y" min="0" max="100" step="1">
+                                <input type="range" id="pic_Y" min="1" max="100" step="1" value="50">
                             </label>
                             <label for="pic_X">
                                 <p>正面圖樣左右位置</p>
-                                <input type="range" id="pic_X" min="0" max="100" step="1">
+                                <input type="range" id="pic_X" min="1" max="100" step="1" value="50">
                             </label>
                         </div>
                         <div class="B-pic_location">
                             <div class="button">
-                                <button></button>
+                                <button id="backPic"></button>
                                 <div>
                                     <p>上傳背面圖樣</p>
                                     <p>限500x500px png檔案</p>
@@ -274,16 +273,16 @@
                             </div>
                             <label for="B-pic_size">
                                 <p>背面圖樣大小</p>
-                                <input type="range" id="B-pic_size" min="0" max="100" step="1">
+                                <input type="range" id="B-pic_size" min="1" max="100" step="100" value="70">
                                 <span id="pic_size-txt"></span>
                             </label>
                             <label for="B-pic_Y">
                                 <p>背面圖樣上下位置</p>
-                                <input type="range" id="B-pic_Y" min="0" max="100" step="1">
+                                <input type="range" id="B-pic_Y" min="1" max="100" step="1" value="70">
                             </label>
                             <label for="B-pic_X">
                                 <p>背面圖樣左右位置</p>
-                                <input type="range" id="B-pic_X" min="0" max="100" step="1">
+                                <input type="range" id="B-pic_X" min="1" max="100" step="1" value="70">
                             </label>
                         </div>
                     </div>
@@ -293,15 +292,13 @@
     </section>
 
     <section class="Inquiry">
-        <div class="container ">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div>
                         <h2>製作好模擬圖，想知道價錢?</h2>
-
-                        <div class="row">
-                            <div class="col-xl-6">
-                                
+                        <div class="row ">
+                            <div class="col-xl-4">
                                 <div class="choose">
                                     <svg width="25"  viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969696 29.1125L19.3939 18.4752L0.969697 7.83797L0.969698 0L32.9697 18.4752L0.969696 36.9504L0.969696 29.1125Z" fill="#FAC766"/>
@@ -350,16 +347,18 @@
                                     <label for="dpi">
                                     <input type="checkbox" name="" id="dpi">
                                     <span>&#10003</span>
-                                    
+                                    <p>
                                     擁有300dpi以上尺寸的圖樣
-                                    
+                                    </p>
                                 </label>
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-4">
                                 <div class="inquiry-button">
-                                    <button>登入會員 <br>
-                                        立即送出詢價</button>
+                                    <button>
+                                        登入會員 <br>
+                                        立即送出詢價
+                                    </button>
                                 </div>
                             </div>
                             <!-- <div class="col-xl-12">
@@ -380,7 +379,7 @@
             </div>
         </div> 
     </section>
-    <div class="to-top"><a href="#"><img src="./pic/icon/up.svg" alt=""></a></div>
+    <div class="to-top"><a href="#top"><img src="./pic/icon/up.svg" alt="去最上面"></a></div>
 
     <!-- 背景 -->
     <!-- 現階段用絕對定位，從最頂部定位下來，之後會用偽元素::after ::before，定位在物件上 -->

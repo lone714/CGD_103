@@ -277,7 +277,6 @@ footer{
 @media screen and (min-width:1200px) {
     .contactUs-card{
         width: 80%;
-        width: calc(100vw - 17px);
         height: 160px;
         left: 10%;
         padding: 20px;

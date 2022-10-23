@@ -81,44 +81,55 @@
     <section>
         <div class="container clothing_case">
             <div class="row">
-                <div class="col-xl-12">
+                <div class="col-xl-9 col-lg-9">
                     <div class="clothing-case">
-                        <h2>精選案例</h2>
-                        <div class="">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                        <h2>看看其他人設計的衣服</h2>
+                        <!-- <div class=""> -->
+                            <div class="clothes-wrap">
+                                <div class="swiper mySwiper">
+                                    <div class="clothes-swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-2.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-2.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-2.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-2.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                        </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
+                                    <div class="swiper-pagination"></div>
+                                    <div id="clothesLeft" class="more">
+                                        <img src="./pic/icon/link-R.svg" alt="看更多客製化衣服" title="看更多客製化衣服">
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
-
-                            </div>
-                        </div>
+                            </div>  
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3">
+                    <div class="pic">
+                        <img src="pic/home/clothes/clothes-528px-0.png" alt="">
                     </div>
                 </div>
             </div>
@@ -132,7 +143,7 @@
                 <div class="col-xl-12">
                     <h2>客製化衣服實作案例</h2>
                 </div>
-                <div class="col-xl-3  col-md-8">
+                <div class="col-xl-3 col-md-6">
                     <div class="Case-control">
                         <div class="choose-gas">
                             <div class="color">
@@ -164,23 +175,43 @@
                             <div class="methods">
                                 <h3>加工方式</h3>
                                     <div>
-                                        <span></span>
-                                        <input type="radio" id="monochrome" name="drone" 
-                                            checked>
-                                        <label for="monochrome">單色印刷</label>
+                                        <label for="monochrome">
+                                            <input type="radio" id="monochrome" name="drone"checked>
+                                            <span>&#10003</span>
+                                            <p>
+                                                單色印刷
+                                            </p>
+                                        </label>
                                     </div>
                                     <div>
-                                        <span></span>
+                                        <label for="Full-Color">
                                         <input type="radio" id="Full-Color" name="drone" 
                                             checked>
-                                        <label for="Full-Color">彩色印刷</label>
+                                            <span>&#10003</span>
+                                            <p>
+                                                彩色印刷
+                                            </p>
+                                        </label>
                                     </div>
                                 
+                                    <div class="white-ink">
 
-                                <input type="checkbox" name="" id="white-ink">
-                                <label for="white-ink">白墨印刷</label>
-                                <input type="checkbox" name="" id="full-version">
-                                <label for="full-version">滿版印刷</label>
+                                        <label for="white-ink">
+                                            <input type="checkbox" name="" id="white-ink">
+                                            <span>&#10003</span>
+                                            <p>白墨印刷</p>
+                                        </label>
+                                    </div>
+                                    <div class="full-version">
+
+                                        <label for="full-version">
+                                            <input type="checkbox" name="" id="full-version">
+                                            <span>&#10003</span>
+                                            <p>
+                                                滿版印刷
+                                            </p>
+                                        </label>
+                                    </div>
                             </div>
                         </div>
                         <a href="./custom_clothing_emulator.html">
@@ -193,7 +224,7 @@
                         
                     </div>
                 </div>
-                <div class="col-xl-9">
+                <div class="col-xl-9 col-md-12">
                     <div class="Case-menu">
                         <div class="Case-wrap">
                             <div class="Case-item">
@@ -379,7 +410,7 @@
 
   
 
-    <div class="to-top"><a href="#"><img src="./pic/icon/up.svg" alt=""></a></div>
+    <div class="to-top"><a href="#top"><img src="./pic/icon/up.svg" alt="去最上面"></a></div>
 
     <!-- 背景 -->
     <!-- 現階段用絕對定位，從最頂部定位下來，之後會用偽元素::after ::before，定位在物件上 -->
