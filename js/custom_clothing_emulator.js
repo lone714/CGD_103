@@ -75,17 +75,17 @@ function doFist(){
         // 底圖加載
 
         let pic0 = new Image()
-        pic0.src = '.././pic/clothing-emulator/clothing-emulator-background.jpg'
+        pic0.src = '././pic/clothing-emulator/clothing-emulator-background.jpg'
         pic0.addEventListener('load',loadImage)
 
         let pic1 = new Image()
-        pic1.src = '.././pic/clothing-emulator/clothing-emulator.jpg'
+        pic1.src = '././pic/clothing-emulator/clothing-emulator.jpg'
         pic1.addEventListener('load',loadImage)
 
         // 圖騰加載，尚未製作圖片上傳的功能，先用範例圖
 
         pic2 = new Image()
-        pic2.src = '.././pic/icon/totem500px.png'
+        pic2.src = '././pic/icon/totem500px.png'
         pic2.addEventListener('load',loadImage)
 
         function loadImage(){
