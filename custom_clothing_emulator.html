@@ -15,7 +15,7 @@
     
 
     <script src="./js/jquery-3.6.1.min.js"></script>
-    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/script.js"></script>
     <script src="./js/custom_clothing_emulator.js"></script>
 </head>
 <body>
@@ -143,49 +143,52 @@
     <section>
         <div class="container clothing">
             <div class="row">
-                <div class="col-xl-8 col-lg-8 emulatorMonitor">
+                <div class="col-xl-8 col-lg-8 col-md-11 col-mi-11 emulatorMonitor">
                     <div class="clothing_emulator-present">
                         <h2>線上客製衣服模擬器</h2>
                         <div class="clothing_emulator">
                             <canvas id="canvas">
                                 <p>不好意思，請使用Goole Chrome.開啟以方便您使用該功能</p>
                             </canvas>
-                            <!-- <img src="./pic/clothing-emulator/clothing-emulator-background.jpg" alt=""> -->
                         </div>
                     </div>
                     <div class="clothing-emulator-caption">
                         <div class="caption">
-                            <div class="form-check">
-                                <label for="form-check-Use">
-                                    <input type="checkbox" name="" id="form-check-Use">
-                                    <span>&#10003</span>
-                                        <p>
-                                            詳閱並同意 <a href="#"> 使用規範</a> 與
-                                            <a href="#">著作權條款</a>
-                                        </p>
-                                </label>    
+                            <div class="consent">
+                                <div class="form-check">
+                                    <label for="form-check-Use">
+                                        <input type="checkbox" name="" id="form-check-Use">
+                                        <span>&#10003</span>
+                                            <p>
+                                                詳閱並同意 <a href="#"> 使用規範</a> 與
+                                                <a href="#">著作權條款</a>
+                                            </p>
+                                    </label>    
+                                </div>
+                            
+                                <div class="form-check">
+                                    <label for="form-check-share">
+                                        <input type="checkbox" name="" id="form-check-share" checked>
+                                        <span>&#10003</span>
+                                        <p>同意分享自己設計的衣服</p>
+                                    </label>
+                                </div>
                             </div>
-                        
-                            <div class="form-check">
-                                <label for="form-check-share">
-                                    <input type="checkbox" name="" id="form-check-share" checked>
-                                    <span>&#10003</span>
-                                    <p>同意分享自己設計的衣服</p>
-                                </label>
-                            </div>
+
                             <div class="button">
                                 <button>
                                     <p>下載模擬圖</p>
                                     <img src="./pic/icon/download.svg" alt="download">
                                 </button>
-                                <p>感謝您願意分享，但需勾選使用規範與著作權條款才可以下載唷</p>
+                                <!-- <p>感謝您願意分享，但需勾選使用規範與著作權條款才可以下載唷</p> -->
                             </div>
                         
                            
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3">
+
+                <div class="col-xl-3 col-lg-3 col-md-11">
                     <div class="clothing_emulator-control">
 
 
@@ -194,13 +197,13 @@
                         </div>
 
                         <div class="color">
-                            <p>選擇想要的顏色</p>
+                            <p>選擇衣服的顏色</p>
                         </div>    
                         <div class="radio">
                             
                             
                             <label for="color1">
-                                <input type="radio" name="color" id="color1">
+                                <input type="radio" name="color" id="color1" value="">
                                 <span ></span>
                             </label>
                             <label for="color2">
@@ -229,61 +232,62 @@
                             </label>
                             <label for="color8">
                                 <input type="radio" name="color" id="color8">
-                                <span id="color8"></span>
+                                <span ></span>
                             </label>
                             <label for="color9">
                                 <input type="radio" name="color" id="color9">
-                                <span id="color9"></span>
+                                <span></span>
                             </label>
                             <label for="color10">
                                 <input type="radio" name="color" id="color10">
-                                <span id="color10"></span>
+                                <span></span>
                             </label>
                         </div>
-
-                        <div class="pic_location">
-                            <div class="button">
-                                <button id="frontPic"></button>
-                                <div>
-                                    <p>上傳正面圖樣</p>
-                                    <p>限500x500px png檔案</p>
+                        <div class="location">
+                            <div class="pic_location">
+                                <div class="button">
+                                    <button id="frontPic"></button>
+                                    <div>
+                                        <p>上傳正面圖樣</p>
+                                        <p>限500x500px png檔案</p>
+                                    </div>
                                 </div>
+                                <label for="pic_size">
+                                    <p>正面圖樣大小</p>
+                                    <input type="range" id="pic_size" min="1" max="100" step="1" value="70">
+                                    <span id="pic_size-txt"></span>
+                                </label>
+                                <label for="pic_Y">
+                                    <p>正面圖樣上下位置</p>
+                                    <input type="range" id="pic_Y" min="1" max="100" step="1" value="30">
+                                </label>
+                                <label for="pic_X">
+                                    <p>正面圖樣左右位置</p>
+                                    <input type="range" id="pic_X" min="1" max="100" step="1" value="50">
+                                </label>
                             </div>
-                            <label for="pic_size">
-                                <p>正面圖樣大小</p>
-                                <input type="range" id="pic_size" min="1" max="100" step="1" value="70">
-                                <span id="pic_size-txt"></span>
-                            </label>
-                            <label for="pic_Y">
-                                <p>正面圖樣上下位置</p>
-                                <input type="range" id="pic_Y" min="1" max="100" step="1" value="50">
-                            </label>
-                            <label for="pic_X">
-                                <p>正面圖樣左右位置</p>
-                                <input type="range" id="pic_X" min="1" max="100" step="1" value="50">
-                            </label>
-                        </div>
-                        <div class="B-pic_location">
-                            <div class="button">
-                                <button id="backPic"></button>
-                                <div>
-                                    <p>上傳背面圖樣</p>
-                                    <p>限500x500px png檔案</p>
+                            <div class="B-pic_location">
+                                <div class="button">
+                                    <button id="backPic"></button>
+                                    <div>
+                                        <p>上傳背面圖樣</p>
+                                        <p>限500x500px png檔案</p>
+                                    </div>
                                 </div>
+                                <label for="B-pic_size">
+                                    <p>背面圖樣大小</p>
+                                    <input type="range" id="B-pic_size" min="1" max="100" step="1" value="70">
+                                    <span id="pic_size-txt"></span>
+                                </label>
+                                <label for="B-pic_Y">
+                                    <p>背面圖樣上下位置</p>
+                                    <input type="range" id="B-pic_Y" min="1" max="100" step="1" value="50">
+                                </label>
+                                <label for="B-pic_X">
+                                    <p>背面圖樣左右位置</p>
+                                    <input type="range" id="B-pic_X" min="1" max="100" step="1" value="50">
+                                </label>
                             </div>
-                            <label for="B-pic_size">
-                                <p>背面圖樣大小</p>
-                                <input type="range" id="B-pic_size" min="1" max="100" step="100" value="70">
-                                <span id="pic_size-txt"></span>
-                            </label>
-                            <label for="B-pic_Y">
-                                <p>背面圖樣上下位置</p>
-                                <input type="range" id="B-pic_Y" min="1" max="100" step="1" value="70">
-                            </label>
-                            <label for="B-pic_X">
-                                <p>背面圖樣左右位置</p>
-                                <input type="range" id="B-pic_X" min="1" max="100" step="1" value="70">
-                            </label>
                         </div>
                     </div>
                 </div>
@@ -294,11 +298,11 @@
     <section class="Inquiry">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12">
+                <div class="col-xl-12 fadeUp">
                     <div>
                         <h2>製作好模擬圖，想知道價錢?</h2>
                         <div class="row ">
-                            <div class="col-xl-4">
+                            <div class="col-xl-8 col-mi-6">
                                 <div class="choose">
                                     <svg width="25"  viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969696 29.1125L19.3939 18.4752L0.969697 7.83797L0.969698 0L32.9697 18.4752L0.969696 36.9504L0.969696 29.1125Z" fill="#FAC766"/>
@@ -307,11 +311,12 @@
                                     <p>訂購數量</p>
                                     <select>
                                         <option value="">請選擇數量</option>
-                                        <option value="">1000</option>
-                                        <option value="">2000</option>
-                                        <option value="">3000</option>
-                                        <option value="">4000</option>
-                                        <option value="">5000</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                        <option value="">100</option>
                                     </select>
                                 </div>
                                 
@@ -319,14 +324,14 @@
                                     <svg width="25" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969696 29.1125L19.3939 18.4752L0.969697 7.83797L0.969698 0L32.9697 18.4752L0.969696 36.9504L0.969696 29.1125Z" fill="#FAC766"/>
                                         </svg>
-                                    <p>圖樣顏色</p>
+                                    <p>圖樣印刷</p>
                                     <select>
-                                        <option value="">請選擇圖樣顏色</option>
-                                        <option value="">1000</option>
-                                        <option value="">2000</option>
-                                        <option value="">3000</option>
-                                        <option value="">4000</option>
-                                        <option value="">5000</option>
+                                        <option value="">請選擇圖樣印刷方式</option>
+                                        <option value="">白墨印刷</option>
+                                        <option value="">單色印刷</option>
+                                        <option value="">彩色印刷</option>
+                                        <option value="">單色滿版印刷</option>
+                                        <option value="">彩色滿版印刷</option>
                                     </select>
                                 </div>
                                 <div class="choose">
@@ -336,11 +341,16 @@
                                     <p>衣服顏色</p>
                                     <select>
                                         <option value="">請選擇衣服顏色</option>
-                                        <option value="">1000</option>
-                                        <option value="">2000</option>
-                                        <option value="">3000</option>
-                                        <option value="">4000</option>
-                                        <option value="">5000</option>
+                                        <option value="">黑色</option>
+                                        <option value="">白色</option>
+                                        <option value="">紅色</option>
+                                        <option value="">藍色</option>
+                                        <option value="">土黃色</option>
+                                        <option value="">青色</option>
+                                        <option value="">灰色</option>
+                                        <option value="">橘色</option>
+                                        <option value="">黃色</option>
+                                        <option value="">綠色</option>
                                     </select>
                                 </div>
                                 <div class="choose">
@@ -353,7 +363,7 @@
                                 </label>
                                 </div>
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-xl-6 col-mi-6">
                                 <div class="inquiry-button">
                                     <button>
                                         登入會員 <br>

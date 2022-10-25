@@ -64,7 +64,7 @@
 
 
 .clothing_emulator-present h2{
-    width: calc(100% + 40px);
+    width: calc(100% + 25px);
     top: 15px;
     left: -25px;
     margin-top:15px ;
@@ -84,7 +84,7 @@
     left: -25px;
     position: absolute;
 
-    width: 26px;
+    width: 25px;
     height: 78px;
     position: absolute;
     transform:translateX(0%) translateY(25%) skewY(45deg);
@@ -105,12 +105,9 @@
     border-radius:0 0 28px 28px;
 }
 
-.clothing_emulator-control{
-    z-index: 2;
-    
-}
 .clothing_emulator-control p{
     font-size: 18px;
+    padding: 5px;
 }
 .clothing_emulator-control img{
     display: flex;
@@ -124,7 +121,7 @@
 
 .button p{
     padding: 2px;
-    font-size: 24px;
+    font-size: 20px;
 }
 .button p + p{
     padding: 2px;
@@ -145,10 +142,10 @@
     background-position: center ;
     border: none;
     padding: 1.5rem 2rem  ;
-    margin: 10px 0px;
+    margin: 10px 4px;
 
     border-radius: 4px;
-
+    vertical-align: middle;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -157,53 +154,46 @@
 
 
 
-
-
+/* 顏色選擇 */
 
 input[type="radio"] {
     display:none;
 }
 
-input[type="radio"] + label {
-    color:#f2f2f2;
-    font-family:Arial, sans-serif;
-}
-
-input[type="radio"] + label span {
-    display:inline-block;
-
-    margin:-2px 10px 0 0;
-    vertical-align:middle;
-    background:#B0B0B0 -38px top no-repeat;
-    cursor:pointer;
-}
-
-input[type="radio"]:checked + label span {
-    border: 2px solid #FFB800;
-}
-
+/* 拉條 */
 
 input[type="range"]{
     -webkit-appearance: none;
     /* overflow:hidden;     限定範圍 */
-    width:200px;
-    height:10px;
+    width:100%;
+    height:8px;
     margin-top: 10px;
     margin-bottom: 10px;
+    vertical-align: middle;
+    
     outline : none;      /* 避免點選會有藍線或虛線 */
     background:#C4C4C4;
     border-radius:10px;
-  }
+}
 
-  input[type="range"]::-webkit-slider-thumb{
+input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
-    width:20px;
-    height:20px;
+    width:18px;
+    height:18px;
     background:#FAC766;
     border-radius:50%;
-    transition:.2s;        /* 點選放大時候的漸變時間 */
-  }
+}
+
+input[type="range"]::-webkit-slider-thumb::after{
+    content: '';
+    width:18px;
+    height:18px;
+    position: absolute;
+    border: 2px solid #4C4948;
+    
+}
+
 
 .pic_size{
     position: relative;
@@ -226,11 +216,28 @@ input[type="range"]{
     margin-bottom: 15px;
     border-bottom: 1px solid #fff;
 }
+.clothing-emulator-caption .caption{
+    display: flex;
+    justify-content: center;
+}
 .clothing-emulator-caption .caption p{
     padding: 5px;
     font-size: 12pt;
 }
-
+.clothing-emulator-caption .caption .consent{
+    width: 80%;
+    align-self: center;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.clothing-emulator-caption .caption button{
+    width: 100%;
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+    
+    vertical-align: middle;
+    
+}
 .clothing-emulator-caption .caption .form-check input p{
     display: inline-block;
     vertical-align: middle;
@@ -244,21 +251,19 @@ input[type="range"]{
     align-items: center;
     flex-direction: row;
 }
-.clothing-emulator-caption button p{
-    padding: right 5px; ;
-}
+
 .clothing-emulator-caption button{
     background:  #4C4948;
     border: none;
     color: #FAC766;
-    padding: 1rem 2rem  ;
-    margin: 10px 0px;
-
+    padding: .6rem 1rem  ;
+    margin: 5px 0px;
     border-radius: 4px;
-    
-    display: flex;
-    vertical-align: bottom;
-    font-size: 16px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.clothing-emulator-caption button p{
+    font-size: 18px;
 
 }
 .form-check{
@@ -269,7 +274,7 @@ input[type="range"]{
 .Inquiry::after{
     content: "";
     width: 100%;
-    height: 120vh;
+    height: 200vh;
     top: 0;
     right: 0;
     left: 0;
@@ -277,14 +282,15 @@ input[type="range"]{
     margin: auto;
     background:url(../pic/back-img/back-img03.jpg) ;
     background-size: cover;
-    background-position: center;
+    background-position: center 20%;
     position: absolute;
     transition: .5s;
     z-index: -1;
 }
 .Inquiry{
     position: relative;
-    margin-top: 450px;
+    display: flex;
+    margin-top: 470px;
     margin-bottom: 350px;
     color: #fff;
     filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
@@ -295,7 +301,12 @@ input[type="range"]{
 .Inquiry h2{
     text-align: center;
     margin-bottom: 100px;
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
 }
+.Inquiry p{
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+}
+
 
 /* display: flex; */
 
@@ -341,20 +352,21 @@ input[type="range"]{
 
 .inquiry-button{
     padding: 30px;
+    z-index: -1;
 } 
 .inquiry-button button{
     background:  #4C4948;
     border: none;
     color: #FAC766;
-    padding: 1rem 2rem  ;
-    margin: 10px 0px;
-
+    padding: .5rem 1rem;
     border-radius: 4px;
-    vertical-align: auto;
+    vertical-align: middle;
+    text-align: center;
     display: flex;
 
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .inquiry-slogan {
@@ -379,6 +391,15 @@ input[type="range"]{
     .clothing_case .pic{
         display: none;
     }
+    .location{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .clothing-emulator-caption button{
+        font-size: 12px;
+    }
 }
 @media screen and (min-width:767px) {
     .clothes-wrap .swiper{
@@ -388,6 +409,46 @@ input[type="range"]{
     .clothing_case .pic{
         display: none;
     }
+
+    .location{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pic_location,.B-pic_location{
+        
+    }
+
+    .clothing_emulator-present h2{
+        width: calc(100% + 25px);
+        top: 15px;
+        left: -25px;
+        margin-top:15px ;
+        padding: 15px 25px;
+        background-color: #4C4948;
+        color: #FAC766;
+        display: block;
+        position: absolute;
+    
+        filter: drop-shadow(0px 4px 7px rgba(0,0,0,.3));
+        z-index: 1;
+    }
+    
+    .clothing_emulator-present::after{
+        content: "";
+        top: 23px;
+        left: -25px;
+        position: absolute;
+    
+        width: 25px;
+        height: 78px;
+        position: absolute;
+        transform:translateX(0%) translateY(25%) skewY(45deg);
+        background: #666464;
+        filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+
 }
 @media screen and (min-width:1024px) {
 
@@ -399,6 +460,9 @@ input[type="range"]{
         display: block;
     }
 
+    .location{
+        flex-direction: column;
+    }
 }
 @media screen and (min-width:1200px) {
 
@@ -427,6 +491,7 @@ input[type="range"]{
     .clothing_emulator-present{
         padding: 0;
     }
+
 
 
 }

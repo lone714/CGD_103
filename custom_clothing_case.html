@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/custom_clothing_case.css">
+    <title>客製化衣服實作案例-新衣袋-New Clothes Bag</title>
     
-    <title>新衣袋-New Clothes Bag</title>
-    
-
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
@@ -81,13 +81,13 @@
     <section>
         <div class="container clothing_case">
             <div class="row">
-                <div class="col-xl-9 col-lg-9">
+                <div class="col-12 col-lg-12">
                     <div class="clothing-case">
                         <h2>看看其他人設計的衣服</h2>
                         <!-- <div class=""> -->
-                            <div class="clothes-wrap">
-                                <div class="swiper mySwiper">
-                                    <div class="clothes-swiper-wrapper">
+                            <div class="wrap">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <a href="./custom_clothing_case_demo_01.html">
                                                 <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製衣服實作案例">
@@ -127,11 +127,6 @@
                         <!-- </div> -->
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3">
-                    <div class="pic">
-                        <img src="pic/home/clothes/clothes-528px-0.png" alt="">
-                    </div>
-                </div>
             </div>
         </div> 
     </section>
@@ -143,55 +138,78 @@
                 <div class="col-xl-12">
                     <h2>客製化衣服實作案例</h2>
                 </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="Case-control">
+                <div class="col-xl-3 col-md-12">
+                    <div class="Case-control fadeUp">
                         <div class="choose-gas">
                             <div class="color">
-                                <p>選擇想要的顏色</p>
+                                <h3>選擇衣服的顏色</h3>
                                 
                                 <div class="radio">
-                                    <input type="radio" name="color" id="color1" value="checked">
-                                    <input type="radio" name="color" id="color2">
-                                    <input type="radio" name="color" id="color3">
-                                    <input type="radio" name="color" id="color4">
-                                    <input type="radio" name="color" id="color5">
-                                    <input type="radio" name="color" id="color6">
-                                    <input type="radio" name="color" id="color7">
-                                    <input type="radio" name="color" id="color8">
-                                    <input type="radio" name="color" id="color9">
-                                    <input type="radio" name="color" id="color10">
-                                    <label for="color1"><span></span></label>
-                                    <label for="color2"><span></span></label>
-                                    <label for="color3"><span></span></label>
-                                    <label for="color4"><span></span></label>
-                                    <label for="color5"><span></span></label>
-                                    <label for="color6"><span></span></label>
-                                    <label for="color7"><span></span></label>
-                                    <label for="color8"><span></span></label>
-                                    <label for="color9"><span></span></label>
-                                    <label for="color10"><span></span></label>
+
+                                    <label for="color1">
+                                        <input type="radio" name="color" id="color1" value="">
+                                        <span ></span>
+                                    </label>
+                                    <label for="color2">
+                                        <input type="radio" name="color" id="color2">
+                                        <span ></span>
+                                    </label>
+                                    <label for="color3">
+                                        <input type="radio" name="color" id="color3">
+                                        <span ></span>
+                                    </label>
+                                    <label for="color4">
+                                        <input type="radio" name="color" id="color4">
+                                        <span></span>
+                                    </label>
+                                    <label for="color5">
+                                        <input type="radio" name="color" id="color5">
+                                        <span></span>
+                                    </label>
+                                    <label for="color6">
+                                        <input type="radio" name="color" id="color6">
+                                        <span></span>
+                                    </label>
+                                    <label for="color7">
+                                        <input type="radio" name="color" id="color7">
+                                        <span></span>
+                                    </label>
+                                    <label for="color8">
+                                        <input type="radio" name="color" id="color8">
+                                        <span ></span>
+                                    </label>
+                                    <label for="color9">
+                                        <input type="radio" name="color" id="color9">
+                                        <span></span>
+                                    </label>
+                                    <label for="color10">
+                                        <input type="radio" name="color" id="color10">
+                                        <span></span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="methods">
                                 <h3>加工方式</h3>
-                                    <div>
-                                        <label for="monochrome">
-                                            <input type="radio" id="monochrome" name="drone"checked>
-                                            <span>&#10003</span>
-                                            <p>
-                                                單色印刷
-                                            </p>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label for="Full-Color">
-                                        <input type="radio" id="Full-Color" name="drone" 
-                                            checked>
-                                            <span>&#10003</span>
-                                            <p>
-                                                彩色印刷
-                                            </p>
-                                        </label>
+                                    <div class="print">
+                                        <div class="monochrome">
+                                            <label for="monochrome">
+                                                <input type="radio" id="monochrome" name="drone"checked>
+                                                <span></span>
+                                                <p>
+                                                    單色印刷
+                                                </p>
+                                            </label>
+                                        </div>
+                                        <div class="Full-Color">
+                                            <label for="Full-Color">
+                                                <input type="radio" id="Full-Color" name="drone" 
+                                                checked>
+                                                <span></span>
+                                                <p>
+                                                    彩色印刷
+                                                </p>
+                                            </label>
+                                        </div>
                                     </div>
                                 
                                     <div class="white-ink">
@@ -225,7 +243,7 @@
                     </div>
                 </div>
                 <div class="col-xl-9 col-md-12">
-                    <div class="Case-menu">
+                    <div class="Case-menu fadeUp">
                         <div class="Case-wrap">
                             <div class="Case-item">
                                 <a href="./custom_clothing_case_demo_01.html">
@@ -333,78 +351,13 @@
 
 
 
-    <section class="container contactUs">
-        <div class="row guideSlogan3">
-            <p>我們有合法授權素材，</p>
-            <p>與專業的設計團隊可以為您製作</p>
+    <section class="Inquiry">
+        <div class="guideSlogan fadeUp">
+            <h2>
+                <p>我們有合法授權素材，</p>
+                <p>與專業的設計團隊可以為您製作</p>
+            </h2>
         </div>
-        
-        <div class="row row-cols-xl-3">
-            <div class="col">
-                <div class="contactUs-card">
-                    <div>
-                        <a class="item" href="#">
-                            <div>
-                                <img src="pic/icon/fb.svg" alt="fb">
-                                <div class="contactUs-card-service">
-                                    <p>09:30~17:30</p>
-                                    <p>真人客服</p>
-                                    <span></span>
-                                    <p>17:30~</p>
-                                    <p>常見QA自動回覆</p>
-                                </div>
-                            </div>
-                            <div class="QR">
-                                <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="contactUs-card">
-                    <div>
-                        <a class="item" href="#">
-                            <div >
-                                <img src="pic/icon/line.svg" alt="line">
-                                <div class="contactUs-card-service">
-                                    <p>09:30~17:30</p>
-                                    <p>真人客服</p>
-                                    <span></span>
-                                    <p>17:30~</p>
-                                    <p>常見QA自動回覆</p>
-                                </div>
-                            </div>
-                            <div class="QR">
-                                <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="contactUs-card">
-                    <div>
-                        <a class="item" href="#">
-                            <div >
-                                <img src="pic/icon/ig.svg" alt="ig">
-                                <div class="contactUs-card-service">
-                                <p>09:30~17:30</p>
-                                <p>真人客服</p>
-                                <span></span>
-                                <p>17:30~</p>
-                                <p>常見QA自動回覆</p>
-                                </div>
-                            <div class="QR">
-                                <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </section>
 
 
@@ -419,42 +372,123 @@
         <div class="bc0-1">
             <div class="round-1"></div> 
         </div>   
-  
         <div class="bc1-2"></div>
         <div class="bc2-1"></div>
         <div class="bc4-1"></div>
-        <div class="bc5-1"></div>
-        <div class="bc6-2"></div>
     </div>
-
 
     <footer>
         <div class="container footer">
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-10 col-md-10 col-mi-11">
+                    <div class="contactUs row row-cols-3 row-cols-mi-3">
+                        <div class="col">
+                            <div class="contactUs-card">
+                                <div>
+                                    <a class="item" href="#">
+                                        <div>
+                                            <div class="icon">
+                                                <img src="pic/icon/fb.svg" alt="fb">
+                                            </div>
+                                            <div class="contactUs-card-service">
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
+                                                <span></span>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="QR">
+                                            <img src="pic/QR/Rickroll-QR.png" alt="Rickroll">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="contactUs-card">
+                                <div>
+                                    <a class="item" href="#">
+                                        <div>
+                                            <div class="icon">
+                                                <img class="icon" src="pic/icon/line.svg" alt="line">
+                                            </div>
+                                            <div class="contactUs-card-service">
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
+                                                <span></span>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="QR">
+                                            <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="contactUs-card">
+                                <div>
+                                    <a class="item" href="#">
+                                        <div>
+                                            <div class="icon">
+                                                <img class="icon" src="pic/icon/ig.svg" alt="ig">
+                                            </div>
+                                            <div class="contactUs-card-service">
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
+                                                <span></span>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="QR">
+                                            <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-10 col-mi-10">
                     <ul class="footer-wrap row">
-                        <li class="col-xl-3">
+                        <li class="col-3">
                             <a href="./custom_clothing_emulator.html">客製化衣服</a>
                             <ul class="footer-item">
                                 <li><a href="./custom_clothing_emulator.html">衣服模擬器</a></li>
                                 <li><a href="./custom_clothing_case.html">客製衣案例</a></li>
                             </ul>
                         </li>
-                        <li class="col-xl-3">
+                        <li class="col-3 col-mi-3">
                             <a href="./custom_bag_emulator.html">客製化紙袋</a>
                             <ul class="footer-item">
                                 <li><a href="./custom_bag_emulator.html">紙袋模擬器</a></li>
                                 <li><a href="./custom_bag_case.html">客製袋案例</a></li>
                             </ul>
                         </li>
-                        <li class="col-xl-3">
+                        <li class="col-3 col-mi-3">
                             <a href="./spot_bag.html">現貨商品</a>
                             <ul class="footer-item">
                                 <li><a href="./spot_bag.html">現貨紙袋</a></li>
                                 <li><a href="./spot_clothing.html">現貨衣服</a></li>
                             </ul>
                         </li>
-                        <li class="col-xl-3">
+                        <li class="col-3 col-mi-3">
                             <a href="./about.html">關於我們</a>
                             <ul class="footer-item">
                                 <li><a href="./service.html">服務條款</a></li>
@@ -462,41 +496,22 @@
                             </ul>
                         </li>
                     </ul>
-                   
-                <span></span>
-                <p class="Disclaimer">
-                本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
-                若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。
-                COPYRIGHT © 2022 PARTYME Co.,Ltd. All rights reserved.
-                </p>
+                </div>
+            <div class="col-12 col-md-12">
+            <span class="footer-span"></span>
+            <p class="Disclaimer">
+            本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
+            若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。
+            COPYRIGHT © 2022 PARTYME Co.,Ltd. All rights reserved.
+            </p>
             </div>
         </div> 
-        <!-- <div class="footer-bc0"></div> -->
-        <!-- <div class="footer-bc1"></div> -->
-        
-        </div>
-        
     </footer>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 6,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        //   navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev"
-        //   }
-        });
-      </script>
+ 
 
 </body>
 </html>

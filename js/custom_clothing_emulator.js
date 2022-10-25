@@ -70,14 +70,16 @@ function doFist(){
     // 計算繪圖
     function draw(){
 
-
-        
         // 載入別的圖片會發生load事件，要做事件聆聽功能
 
         // 底圖加載
 
+        let pic0 = new Image()
+        pic0.src = '../pic/clothing-emulator/clothing-emulator-background.jpg'
+        pic0.addEventListener('load',loadImage)
+
         let pic1 = new Image()
-        pic1.src = '../pic/clothing-emulator/clothing-emulator-background.jpg'
+        pic1.src = '../pic/clothing-emulator/clothing-emulator.jpg'
         pic1.addEventListener('load',loadImage)
 
         // 圖騰加載，尚未製作圖片上傳的功能，先用範例圖
@@ -92,19 +94,19 @@ function doFist(){
 
             // c.drawImage(Image,dx,dy,dWidth,dHeight);
             // 底圖繪製
-            c.drawImage(pic1,0,0,WEmulator,HEmulator);
-            c.globalCompositeOperation = 'multiply'
+            c.drawImage(pic0,0,0,WEmulator,HEmulator);
             // 圖騰繪製
+            c.globalCompositeOperation = 'multiply'
             c.drawImage(pic2,
-                ((WEmulator *0.11)+(((WEmulator* 0.28)-(WEmulator * 0.28 * pic_size))* pic_X)),
-                ((WEmulator *0.18)+(((HEmulator* 0.4)-(WEmulator * 0.28 * pic_size)) * pic_Y )),
+                ((WEmulator *0.12)+(((WEmulator* 0.28)-(WEmulator * 0.28 * pic_size))* pic_X)),
+                ((WEmulator *0.15)+(((HEmulator*0.6)-(WEmulator * 0.28 * pic_size)) * pic_Y )),
                 (WEmulator * 0.28 * pic_size),
                 (WEmulator * 0.28 * pic_size));
-
+            c.globalCompositeOperation = 'source-over';
             // 紋理繪製
-            c.globalCompositeOperation = 'multiply'
+            c.globalCompositeOperation = 'destination-atop';
             // c.globalAlpha=0.5;
-            c.drawImage(pic1,0,0,WEmulator,HEmulator);
+            c.drawImage(pic0,0,0,WEmulator,HEmulator);
             c.globalCompositeOperation = 'source-over';
             // c.globalAlpha=1;
             
@@ -130,27 +132,7 @@ function doFist(){
             // c.strokeStyle='rgba(0,0,0,0.3)';
             // c.stroke()
         }
-
-
     }
-
-
-
-
-    let clothesWrapper = document.querySelector(".clothes-swiper-wrapper");
-    let curIndex = 0;
-
-    $id("clothesLeft").onclick = function () {
-        if (curIndex === 5) {
-            curIndex = 0;
-            clothesWrapper.style = `transform: translateX(0px);`;
-        }else {
-            curIndex ++ ;
-            clothesWrapper.style.transform = `translateX( ${curIndex * 220}px)`;           
-        }
-
-    };
-
 }
 
 window.addEventListener('load',doFist)
