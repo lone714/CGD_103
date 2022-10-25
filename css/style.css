@@ -55,6 +55,18 @@ html {
 
 }
 
+/* 鎖定滾軸 */
+html.noscroll {
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+
+html.fixWindow {
+    position: fixed;
+    width: 100%;
+}
+
 
 
 .father{
@@ -78,7 +90,7 @@ a{
 }
 a:hover{
     color: #FF612F;
-clothing_emulator    transition: .3s;
+    transition: .3s;
 }
 a:visited{
     color: #FF612F;
@@ -170,48 +182,74 @@ label input[type=checkbox]~p{
 
 /* 跳出視窗 */
 
-dialog{
+.dialog{
+    display: none;
     position: fixed ;
+    width: 50%;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    padding: 5px;
     margin: 20% auto;
     border: none;
+    background-color: rgba(225, 225, 225, 0.9);
     box-shadow: 0 2px 6px #ccc;
     border-radius: 10px;
-    z-index: 9999;
+    z-index: 1000;
     text-align: right;
 }
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.1);
+
+.dialogOn{
+       display: inline-block;
+    }
+
+
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
 }
-dialog span{
+.dialog span{
     padding: 2px;
     user-select: none;
     cursor: pointer;
 }
-dialog p{
+.dialog p{
     text-align: center;
     line-height: 1.5;
     font-size: 20px;
     font-weight: 600;
 }
-dialog p+p{
+.dialog p+p{
     text-align: center;
     line-height: 1.5;
     font-size: 18px;
     font-weight: 300;
 }
+.allViewport{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed ;
+    background-color: rgba(0,0,0,.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+.allViewportOn{
+    display: block;
+}
+
 
 @media screen and (max-width:768px) {
-    dialog p{
+    .dialog p{
         text-align: center;
         line-height: 1.5;
         font-size: 18px;
         font-weight: 600;
     }
-    dialog p+p{
+    .dialog p+p{
         text-align: center;
         line-height: 1.5;
         font-size: 14px;
@@ -286,7 +324,7 @@ dialog p+p{
     position: absolute;
     bottom: 3px;
     right:6px;
-
+    cursor: pointer;
     z-index: 30;
 }
 .more img{
@@ -311,10 +349,10 @@ dialog p+p{
     overflow: hidden;
 
 }
-.swiper-wrapper{
+.swiper .swiper-wrapper{
     width:1980px;
     display: flex;
-    /* right: -10px; */
+    right: 0px;
     flex-direction: row-reverse;
     position: absolute;
     transition: transform .7s;
@@ -326,6 +364,7 @@ dialog p+p{
     position: absolute;
     bottom: 3px;
     right:6px;
+
 
     z-index: 30;
 }
@@ -503,14 +542,19 @@ dialog p+p{
 /* ------顏色單選按紐------ */
 
 .radio{
-    justify-content: center;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
 }
+
 
 input[name="color"] + span{
     display: inline-block;
     width: 25px;
     height: 25px;
-    margin: 12px;
+    margin: 8px;
     border-radius: 4px;
     /* background: #000; */
     outline: 3px solid #00000000 ;
@@ -554,8 +598,8 @@ input[name="color"] + span{
 }
 
 
-
 .color{
+    
     position: relative;
     z-index: 50;
 }
@@ -590,6 +634,7 @@ input[name="color"] + span{
 
 
 .fadeLeft{
+    display: none;
     opacity:0;
     transform: translateX(-100px);
     transition: .5s;
@@ -598,12 +643,14 @@ input[name="color"] + span{
     
 
 .fadeLeftOn{
+    display: flex;
     opacity: 1;
     transform: translateX(0);
     transition: .5s;
 }
 
 .fadeRight{
+    display: none;
     opacity:0;
     transform: translateX(100px);
     transition: .5s;
@@ -612,6 +659,7 @@ input[name="color"] + span{
     
 
 .fadeRightOn{
+    display: flex;
     opacity: 1;
     transform: translateX(0);
     transition: .5s;
@@ -639,10 +687,3 @@ input[name="color"] + span{
 }
 
 
-@media screen and (max-width:768px) {
-    label input[type=checkbox]~p{
-        font-size: 10pt;
-        float: right;
-        padding: 5px;
-    }
-}

@@ -11,7 +11,8 @@
 
 
 .About {
-    filter: drop-shadow(-4px 4px 7px rgba(0, 0, 0, 0.3))
+    filter: drop-shadow(-4px 4px 7px rgba(0, 0, 0, 0.3));
+    margin-bottom: 550px;
 }
 .About h2 {
     padding: 15px 0;
@@ -21,7 +22,7 @@
 
 }
 .about-body {
-    /* margin: 0 20px; */
+    margin: 0 0 50px 0;
     padding: 20px;
     background-color: #eee;
     border-radius: 20px;
@@ -89,3 +90,13 @@
 .bc2-1{
     height: 1100px;
 }
+
+
+@media screen and (max-width:768px) {
+    .pic{display: none;}
+}
+@media screen and (min-width:767.98px) {
+    /* .pic{display: none;} */
+}
+@media screen and (min-width:1024px) {}
+@media screen and (min-width:1200px) {}

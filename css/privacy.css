@@ -1,0 +1,91 @@
+
+/* ---------about內頁----------- */
+.About{
+    padding-top: 100px;
+    position: relative;
+    z-index: 50;
+    margin-bottom: 200px;
+}
+
+
+
+
+.About {
+    filter: drop-shadow(-4px 4px 7px rgba(0, 0, 0, 0.3))
+}
+.About h2 {
+    padding: 15px 0;
+    /* margin: 20px 0; */
+    border-bottom: 2px solid #E2AD49;
+    color: #4C4948;
+
+}
+.about-body {
+    /* margin: 0 20px; */
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 20px;
+    
+}
+.about-body h3 {
+    margin: 10px 0;
+    /* margin-top: 50px; */
+    font-size: 24px;
+    color: #4C4948;
+}
+.about-body p {
+    color: #666464;
+    line-height: 1.7;
+    text-align: justify;
+    /* margin-bottom: 10px; */
+}
+.about-body h4{
+    color: #4C4948;
+    line-height: 1.7;
+}
+.About .pic img{
+    width: 100%;
+}
+
+.about-body-wrap{
+    display: flex;
+    margin:10px -20px;
+
+}
+
+.about-body-wrap .about-body-item .pic img{
+    width: 100%;
+    margin:10px 0;
+}
+
+.about-body-item{
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 40px);
+    height: auto;
+    margin: 0 20px;
+}
+
+.about-body-item p{
+    flex-grow: 1;
+}
+
+/* 標語 */
+
+.guideSlogan{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+
+/* 背景 */
+
+.bc0{
+    overflow: hidden;
+    background:
+    linear-gradient(0deg, #666464 0%, #4C4948 100%);
+}
+
+.bc2-1{
+    height: 1100px;
+}

@@ -1,5 +1,65 @@
 function doFist(){
+
+    $(".terms1").click(function () {
+        if ($(document).height() > $(window).height()) {
+            $("html").addClass("noscroll");
+        }else{
+            $("html").addClass("fixWindow"); 
+        }
+        $(".dialog").addClass("dialogOn")
+        $(".allViewport").addClass("allViewportOn");
+        
+    });
+    $(".terms2").click(function () {
+        if ($(document).height() > $(window).height()) {
+            $("html").addClass("noscroll");
+        }else{
+            $("html").addClass("fixWindow"); 
+        }
+        $(".dialog").addClass("dialogOn")
+        $(".allViewport").addClass("allViewportOn");
+        
+    });
+    $(".X").click(
+        function () {
+            $(".dialog").removeClass("dialogOn");
+            $(".allViewport").removeClass("allViewportOn")
+
+            if ($(document).height() > $(window).height()) {
+                $("html").removeClass("noscroll");
+            }else{
+               $("html").removeClass("fixWindow");
+            }
+    });
+    $(".allViewport").click(
+        function () {
+            $(".dialog").removeClass("dialogOn");
+            $(".allViewport").removeClass("allViewportOn");
+
+            if ($(document).height() > $(window).height()) {
+                $("html").removeClass("noscroll");
+            }else{
+               $("html").removeClass("fixWindow");
+            }
+    });
+
+
+    // $(function() {
+    //     $("#dialogOn").dialog({
+    //         autoOpen: false,
+    //         show: "blind",
+    //         hide: "explode",
+    //         buttons: {
+    //             "Ok": function() { $(this).dialog("close"); },
+    //             "Cancel": function() { $(this).dialog("close"); }
+    //             }
+    //     });
     
+    //     $("#opener").click(function() {
+    //         $("#dialog_div").dialog("open");
+    //         return false;
+    //     });
+    // });
     
     //先跟HTML畫面產生關聯，再建立視件聆聽功能
     let canvas = document.getElementById('canvas');

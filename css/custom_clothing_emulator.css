@@ -270,6 +270,11 @@ input[type="range"]::-webkit-slider-thumb::after{
     display: flex;
 }
 
+.terms1,.terms2{
+    color: #FAC766;
+}
+
+
 
 .Inquiry::after{
     content: "";
@@ -299,6 +304,7 @@ input[type="range"]::-webkit-slider-thumb::after{
 }
 
 .Inquiry h2{
+    line-height: 1.5;
     text-align: center;
     margin-bottom: 100px;
     filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
@@ -308,7 +314,6 @@ input[type="range"]::-webkit-slider-thumb::after{
 }
 
 
-/* display: flex; */
 
 
 .choose{
@@ -401,7 +406,7 @@ input[type="range"]::-webkit-slider-thumb::after{
         font-size: 12px;
     }
     .clothing_emulator{
-        padding-top:75px;
+        padding-top:80px;
     }
     .clothing_emulator-present h2{
         width: calc(100%);
@@ -427,10 +432,57 @@ input[type="range"]::-webkit-slider-thumb::after{
         filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
     }
 
-    .clothing-emulator-caption .caption p {
-        padding: 5px;
-        font-size: 8pt;
+
+    .clothing-emulator-caption .caption{
+        margin: 0;
     }
+    .clothing-emulator-caption .caption p {
+        padding-bottom: 5px;
+        font-size: 8px;
+    }
+    .pic_location,.B-pic_location{
+        margin: 10px;
+    }
+
+
+    .choose{
+        position: relative;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        z-index: 55;
+    }
+    
+    .choose svg{
+        padding: 5px 0;
+        margin-right: 5px;
+        /* transform: rotate(90deg); */
+    }
+    
+    .choose p{
+        padding: 5px 0px;
+        font-size: 20pt;
+        float: left;
+    }
+    
+    
+    .choose select{
+        padding: 5px;
+        background-color: #eee;
+    }
+    
+    .bc0-1{
+        height: 1000px;
+    }
+    .bc2-1{
+        height: 600px;
+    }
+
+
+
 }
 @media screen and (min-width:767px) {
     .clothes-wrap .swiper{
@@ -446,10 +498,9 @@ input[type="range"]::-webkit-slider-thumb::after{
         flex-direction: row;
         justify-content: center;
     }
+    
 
-    .pic_location,.B-pic_location{
-        
-    }
+
 
     .clothing_emulator-present h2{
         width: calc(100% + 25px);
@@ -478,6 +529,9 @@ input[type="range"]::-webkit-slider-thumb::after{
         transform:translateX(0%) translateY(25%) skewY(45deg);
         background: #666464;
         filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+    .pic_location,.B-pic_location{
+        margin: 10px;
     }
 
 }

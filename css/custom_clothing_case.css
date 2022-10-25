@@ -45,11 +45,16 @@
 }
 
 
-.print{
+.print div{
     padding: 5px;
     display: flex;
-    justify-content: start;
-    justify-self: start;
+}
+.print label{
+    display: flex;
+    align-items: center
+}
+.white-ink,.full-version{
+    display: flex;
 }
 
 .emulator{
@@ -64,9 +69,7 @@
     line-height: 52px;
     color: #FAC766; 
 }
-.print label{
-    float: right;
-}
+
 
 /* 單選按鈕 */
 input[type="radio"] {

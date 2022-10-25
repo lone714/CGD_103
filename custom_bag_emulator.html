@@ -4,337 +4,561 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="grid.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/custom_bag_emulator.css">
     
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <title>新衣袋-New Clothes Bag</title>
+    <title>客製化紙袋模擬器-新衣袋</title>
     
 
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/custom_clothing_emulator.js"></script>
 </head>
 <body>
-    <header class="header-backglass2">   
-        <div class="container">
-            <div class="row">
-                <div class="header row">
-                    <a href="./index.html">
-                        <h1><img src="./pic/header/New Clothes Bag-LOGO.svg" alt="【New Clothes Bag】logo"></h1>
-                    </a>
-                    <div>
-                        <label for="menu-switch" class="hb">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
-                    </div>
-                    <nav class="main-nav">
-                        <ul class="menu">
-                            <li>
-                                <a href="custom_clothing_emulator.html">客製化衣服</a>
-                                <ul class="sub-menu">
-                                    <li><a href="custom_clothing_emulator.html">衣服模擬器</a></li>
-                                    <li><a href="custom_clothing_case.html">客製衣案例</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="custom_bag_emulator.html">客製化紙袋</a>
-                                <ul class="sub-menu">
-                                    <li><a href="custom_bag_emulator.html">紙袋模擬器</a></li>
-                                    <li><a href="custom_bag_case.html">客製袋案例</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="Spot_bag.html">現貨商品</a>
-                                <ul class="sub-menu">
-                                    <li><a href="Spot_bag.html">現貨紙袋</a></li>
-                                    <li><a href="Spot_clothing.html">現貨衣服</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="about.html">關於我們</a>
-                                <ul class="sub-menu">
-                                    <li><a href="service.html">服務條款</a></li>
-                                    <li><a href="privacy.html">隱私政策</a></li>
-                                </ul>
-                            </li>
+    <header>
+        <div class="header-backglass"></div>
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="container header">
+            <h1>
+                <a href="./index.html">
+                    <img src="./pic/header/New Clothes Bag-LOGO.svg" alt="【New Clothes Bag】logo">
+                </a>
+                <p>New Clothes Bag</p>
+            </h1>
+            
+            <label for="menu-switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li>
+                        <a href="./custom_clothing_emulator.html">客製化衣服 &or;</a>
+                        <ul class="sub-menu">
+                            <li><a href="./custom_clothing_emulator.html">衣服模擬器</a></li>
+                            <li><a href="./custom_clothing_case.html">客製衣案例</a></li>
                         </ul>
-                        
-                    </nav>     
-                    <div class="menu-icon">
-                        <img src="./pic/icon/icon_shopping.svg" alt="購物車">
-                        <img src="./pic/icon/icon_member.svg" alt="會員登入">
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <a href="./custom_bag_emulator.html">客製化紙袋 &or;</a>
+                        <ul class="sub-menu">
+                            <li><a href="./custom_bag_emulator.html">紙袋模擬器</a></li>
+                            <li><a href="./custom_bag_case.html">客製袋案例</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./Spot_bag.html">現貨商品 &or;</a>
+                        <ul class="sub-menu">
+                            <li><a href="./Spot_bag.html">現貨紙袋</a></li>
+                            <li><a href="./Spot_clothing.html">現貨衣服</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./about.html">關於我們</a>
+                        <ul class="sub-menu">
+                            <li><a href="./service.html">服務條款</a></li>
+                            <li><a href="./privacy.html">隱私政策</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 
-                
+            </nav>     
+            <div class="menu-icon">
+                <a href="">
+                    <img src="pic/icon/icon_shopping.svg" alt="購物車">
+                </a>
+                <a href="">
+                    <img src="pic/icon/icon_member.svg" alt="會員登入">
+                </a>
             </div>
         </div> 
-        <div class="header-backglass1"></div>
+        
     </header>
 
     <section>
-        <div class="container About">
+        <div class="container clothing_case">
             <div class="row">
-                <div class="col-xl-8">
-                    <div class="about-body">
-                        <h2>關於我們</h2>
-                        <div class="">
-                            <h3>經營理念</h3>
-                            <p>新衣袋New Clothes Bag，創立於2021年，想要帶給客戶最好的體驗，我們致力生產品質優良的衣服與紙袋。</p>
-                            <p>為了使客戶的產品有更好的品質與包裝，我們從版面設計、印刷、成型至包裝出貨皆包辦。</p>
-                            <p>此外我們提供了線上模擬設計的服務，方便您模擬</p>
-
-                            <h3>環境議題</h3>
-                            <p>我們從不使用任何號稱會降解的塑膠材質，這種假環保材質只會製造更多污染，且沒有集中進行後續處理則有機會變成不易分解的碎塊，流進海洋中形成無法處理的塑膠濃湯，混在回收塑料還會造成整批原料汙染。</p>
-                            <p><h4> 衣服就應該要耐用，提高品質並增加使用次數就是對於減緩污染的最佳方法。</h4></p>
-                        </div>
+                <div class="col-xl-9 col-lg-9">
+                    <div class="clothing-case">
+                        <h2>看看其他人設計的紙袋</h2>
+                        <!-- <div class=""> -->
+                            <div class="clothes-wrap">
+                                <div class="swiper mySwiper">
+                                    <div class="clothes-swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-2.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./custom_clothing_case_demo_01.html">
+                                                <img src="./pic/home/clothes/clothes-250px-1.jpg" alt="【New Clothes Bag】客製紙袋實作案例">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div id="clothesLeft" class="more">
+                                        <img src="./pic/icon/link-R.svg" alt="看更多客製化紙袋" title="看更多客製化紙袋">
+                                    </div>
+                                </div>
+                            </div>  
+                        <!-- </div> -->
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-3 col-lg-3">
                     <div class="pic">
                         <img src="pic/home/clothes/clothes-528px-0.png" alt="">
                     </div>
                 </div>
-                <div class="col-xl-12">
-                    <div class="about-body">
-                        <h2>服務項目</h2>
-                        <div class="row">
-                            <div class="col-xl-3 about-body-wrap">
-                                <div class="about-body-item">
-                                    <h3>客製化衣服</h3>
-                                    <p>很快則是攝影回去做好最好的，上班多少法院家長，怎麼樣引進熱門輔助輸入一座接下來三大管理系統辦法可以交給，場所管理員瀏覽次數，時代徹底還是實施成就是啊方向幹部鑒定門派，回去順利零售模糊基層筆記本有很多把你編號是什麼走了一些，權限達到，以為原文玄幻眼神，較高。</p>
-                                </div>
-                                <div class="pic">
-                                    <img src="pic/about/bag-slogan-01.jpg" alt="客製化紙袋">
-                                </div>
-                            </div>
-                            <div class="col-xl-3">
-                                <div class="about-body-item">
-                                    <h3>客製化紙袋</h3>
-                                    <p>很快則是攝影回去做好最好的，上班多少法院家長，怎麼樣引進熱門輔助輸入一座接下來三大管理系統辦法可以交給，場所管理員瀏覽次數，時代徹底還是實施成就是啊方向幹部鑒定門派，回去順利零售模糊基層筆記本有很多把你編號是，權限達到，以為原文玄幻眼神，較高。</p>
-                                </div>
-                                <div class="pic">
-                                    <img src="pic/about/bag-slogan-01.jpg" alt="客製化紙袋">
-                                </div>
-                            </div>
-                            <div class="col-xl-3">
-                                <div class="about-body-item">
-                                    <h3>現貨紙袋、衣服販售</h3>
-                                    <p>很快則是攝影回去做好最好的，上班多少法院家長，怎麼樣引進熱門輔助輸入一座接下來三大管理系統辦法可以交給，場所管理員瀏覽次數，時代徹底還是實施成就是啊方向幹部鑒定門派，什麼走了一些，權限達到，以為原文玄幻眼神，較高。</p>
-                                </div>
-                                <div class="pic">
-                                    <img src="pic/about/bag-slogan-01.jpg" alt="客製化紙袋">
-                                </div>
-                            </div>
-                            <div class="col-xl-3">
-                                <div class="about-body-item">
-                                    <h3>圖樣、LOGO設計</h3>
-                                    <p>很快則是攝影回去做好最好的，上班多少法院家長，怎麼樣引進熱門輔助輸入一座接下來三大管理系統辦法可以交給，場所管理員瀏覽次數，時代徹底還是實施成就是啊方向幹部鑒定門派，回去順利零售模糊基層筆記本有很多把你編號是什麼走了一些。</p>
-                                </div>
-                                <div class="pic">
-                                    <img src="pic/about/bag-slogan-01.jpg" alt="客製化紙袋">
-                                </div>
-                            </div>
-                          
-                            
+            </div>
+        </div> 
+    </section>
 
+    <section>
+        <div class="container clothing">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-11 col-mi-11 emulatorMonitor">
+                    <div class="clothing_emulator-present">
+                        <h2>線上客製紙袋模擬器</h2>
+                        <div class="clothing_emulator">
+                            <canvas id="canvas">
+                                <p>不好意思，請使用Goole Chrome.開啟以方便您使用該功能</p>
+                            </canvas>
                         </div>
                     </div>
 
+                    <div class="clothing-emulator-caption">
+                        <div class="caption">
+                            <div class="consent">
+                                <div class="form-check">
+                                    <label for="form-check-Use">
+                                        <input type="checkbox" name="" id="form-check-Use">
+                                        <span>&#10003</span>
+                                            <p>
+                                                詳閱並同意 <a href="#" id="terms">使用規範</a> 與 
+                                                <a href="#">著作權條款</a>
+                                            </p>
+                                    </label>    
+                                </div>
+                            
+                                <div class="form-check">
+                                    <label for="form-check-share">
+                                        <input type="checkbox" name="" id="form-check-share" checked>
+                                        <span>&#10003</span>
+                                        <p>同意分享自己設計的紙袋</p>
+                                    </label>
+                                </div>
+                            </div>
 
+                            <div class="button">
+                                <button>
+                                    <p>下載模擬圖</p>
+                                    <img src="./pic/icon/download.svg" alt="download">
+                                </button>
+                                <!-- <p>感謝您願意分享，但需勾選使用規範與著作權條款才可以下載唷</p> -->
+                            </div>
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-11">
+                    <div class="clothing_emulator-control">
+
+
+                        <div class="caption">
+                            <p>上傳你喜歡圖樣</p>
+                        </div>
+
+                        <div class="color">
+                            <p>選擇紙袋的顏色</p>
+                        </div>    
+                        <div class="radio">
+                            
+                            
+                            <label for="color1">
+                                <input type="radio" name="color" id="color1" value="">
+                                <span ></span>
+                            </label>
+                            <label for="color2">
+                                <input type="radio" name="color" id="color2">
+                                <span ></span>
+                            </label>
+                            <label for="color3">
+                                <input type="radio" name="color" id="color3">
+                                <span ></span>
+                            </label>
+                            <label for="color4">
+                                <input type="radio" name="color" id="color4">
+                                <span></span>
+                            </label>
+                            <label for="color5">
+                                <input type="radio" name="color" id="color5">
+                                <span></span>
+                            </label>
+                            <label for="color6">
+                                <input type="radio" name="color" id="color6">
+                                <span></span>
+                            </label>
+                            <label for="color7">
+                                <input type="radio" name="color" id="color7">
+                                <span></span>
+                            </label>
+                            <label for="color8">
+                                <input type="radio" name="color" id="color8">
+                                <span ></span>
+                            </label>
+                            <label for="color9">
+                                <input type="radio" name="color" id="color9">
+                                <span></span>
+                            </label>
+                            <label for="color10">
+                                <input type="radio" name="color" id="color10">
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="location">
+                            <div class="pic_location">
+                                <div class="button">
+                                    <button id="frontPic"></button>
+                                    <div>
+                                        <p>上傳正面圖樣</p>
+                                        <p>限500x500px png檔案</p>
+                                    </div>
+                                </div>
+                                <label for="pic_size">
+                                    <p>正面圖樣大小</p>
+                                    <input type="range" id="pic_size" min="1" max="100" step="1" value="70">
+                                    <span id="pic_size-txt"></span>
+                                </label>
+                                <label for="pic_Y">
+                                    <p>正面圖樣上下位置</p>
+                                    <input type="range" id="pic_Y" min="1" max="100" step="1" value="30">
+                                </label>
+                                <label for="pic_X">
+                                    <p>正面圖樣左右位置</p>
+                                    <input type="range" id="pic_X" min="1" max="100" step="1" value="50">
+                                </label>
+                            </div>
+                            <div class="B-pic_location">
+                                <div class="button">
+                                    <button id="backPic"></button>
+                                    <div>
+                                        <p>上傳背面圖樣</p>
+                                        <p>限500x500px png檔案</p>
+                                    </div>
+                                </div>
+                                <label for="B-pic_size">
+                                    <p>背面圖樣大小</p>
+                                    <input type="range" id="B-pic_size" min="1" max="100" step="1" value="70">
+                                    <span id="pic_size-txt"></span>
+                                </label>
+                                <label for="B-pic_Y">
+                                    <p>背面圖樣上下位置</p>
+                                    <input type="range" id="B-pic_Y" min="1" max="100" step="1" value="50">
+                                </label>
+                                <label for="B-pic_X">
+                                    <p>背面圖樣左右位置</p>
+                                    <input type="range" id="B-pic_X" min="1" max="100" step="1" value="50">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div> 
     </section>
 
-    <section class="container contactUs">
-        <div class="row guideSlogan2">
-            <p>歡迎聯絡我們，</p>
-            <p><span>專業設計團隊</span>為您服務。</p>
-        </div>
+    <!-- <dialog id="dialog" title="免責聲明">
+        <span id="X">&Chi;</span>
+        <p>免責聲明</p>
+        <p>此網站為學習與練習用，不擔保其正確性、即時性或完整性</p>
+    </dialog> -->
 
-        <div class="row row-cols-xl-3">
-            <div class="col">
-                <div class="contactUs-card">
+    <section class="Inquiry">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 fadeUp">
                     <div>
-                        <a class="item" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <div>
-                                <img src="pic/icon/fb.svg" alt="fb">
-                                <div class="contactUs-card-service">
-                                    <p>09:30~17:30</p>
-                                    <p>真人客服</p>
-                                    <span></span>
-                                    <p>17:30~</p>
-                                    <p>常見QA自動回覆</p>
+                        <h2>製作好模擬圖，想知道價錢?</h2>
+                        <div class="row ">
+                            <div class="col-xl-8 col-mi-6">
+                                <div class="choose">
+                                    <svg width="25"  viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969696 29.1125L19.3939 18.4752L0.969697 7.83797L0.969698 0L32.9697 18.4752L0.969696 36.9504L0.969696 29.1125Z" fill="#FAC766"/>
+                                        </svg>
+                                        
+                                    <p>訂購數量</p>
+                                    <select>
+                                        <option value="">請選擇數量</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                        <option value="">100</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="choose">
+                                    <svg width="25" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969696 29.1125L19.3939 18.4752L0.969697 7.83797L0.969698 0L32.9697 18.4752L0.969696 36.9504L0.969696 29.1125Z" fill="#FAC766"/>
+                                        </svg>
+                                    <p>圖樣印刷</p>
+                                    <select>
+                                        <option value="">請選擇圖樣印刷方式</option>
+                                        <option value="">白墨印刷</option>
+                                        <option value="">單色印刷</option>
+                                        <option value="">彩色印刷</option>
+                                        <option value="">單色滿版印刷</option>
+                                        <option value="">彩色滿版印刷</option>
+                                    </select>
+                                </div>
+                                <div class="choose">
+                                    <svg width="25" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969696 29.1125L19.3939 18.4752L0.969697 7.83797L0.969698 0L32.9697 18.4752L0.969696 36.9504L0.969696 29.1125Z" fill="#FAC766"/>
+                                        </svg>
+                                    <p>紙袋顏色</p>
+                                    <select>
+                                        <option value="">請選擇紙袋顏色</option>
+                                        <option value="">黑色</option>
+                                        <option value="">白色</option>
+                                        <option value="">紅色</option>
+                                        <option value="">藍色</option>
+                                        <option value="">土黃色</option>
+                                        <option value="">青色</option>
+                                        <option value="">灰色</option>
+                                        <option value="">橘色</option>
+                                        <option value="">黃色</option>
+                                        <option value="">綠色</option>
+                                    </select>
+                                </div>
+                                <div class="choose">
+                                    <label for="dpi">
+                                    <input type="checkbox" name="" id="dpi">
+                                    <span>&#10003</span>
+                                    <p>
+                                    擁有300dpi以上尺寸的圖樣
+                                    </p>
+                                </label>
                                 </div>
                             </div>
-                            <div class="QR">
-                                <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
+                            <div class="col-xl-6 col-mi-6">
+                                <div class="inquiry-button">
+                                    <button>
+                                        登入會員 <br>
+                                        立即送出詢價
+                                    </button>
+                                </div>
                             </div>
-                        </a>
+                            <!-- <div class="col-xl-12">
+                                <div class="inquiry-slogan">
+                                    <p> 
+                                        沒有圖，<br>
+                                        但想要打造自己獨特的紙袋</p>
+                                    <p>
+                                        我們有合法授權素材，<br>
+                                        與專業的設計團隊可以為您製作
+                                    </p>
+                                </div>
+                            </div> -->
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="contactUs-card">
-                    <div>
-                        <a class="item" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <div >
-                                <img src="pic/icon/line.svg" alt="line">
-                                <div class="contactUs-card-service">
-                                    <p>09:30~17:30</p>
-                                    <p>真人客服</p>
-                                    <span></span>
-                                    <p>17:30~</p>
-                                    <p>常見QA自動回覆</p>
-                                </div>
-                            </div>
-                            <div class="QR">
-                                <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="contactUs-card">
-                    <div>
-                        <a class="item" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <div >
-                                <img src="pic/icon/ig.svg" alt="ig">
-                                <div class="contactUs-card-service">
-                                <p>09:30~17:30</p>
-                                <p>真人客服</p>
-                                <span></span>
-                                <p>17:30~</p>
-                                <p>常見QA自動回覆</p>
-                                </div>
-                            <div class="QR">
-                                <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+        </div> 
     </section>
-
-
-  
-
-    <div class="to-top"><a href="#"><img src="./pic/icon/up.svg" alt=""></a></div>
+    <div class="to-top"><a href="#top"><img src="./pic/icon/up.svg" alt="去最上面"></a></div>
 
     <!-- 背景 -->
     <!-- 現階段用絕對定位，從最頂部定位下來，之後會用偽元素::after ::before，定位在物件上 -->
 
-    <div>
-        <div class="bc0-2"></div>   
-        <div class="round-1"></div>   
-        <div class="bc1-1"></div>
+    <div >
+        <div class="bc0-1">
+            <div class="round-1"></div> 
+        </div>   
+  
+        <div class="bc1-2"></div>
         <div class="bc2-1"></div>
-        <div class="bc5"></div>
-
+        <div class="bc4-1"></div>
+        <div class="bc5-1"></div>
+        <!-- <div class="bc6-1"></div> -->
     </div>
 
-
     <footer>
-        
         <div class="container footer">
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-10 col-md-10 col-mi-12">
+                    <div class="contactUs row row-cols-3 row-cols-mi-3">
+                        <div class="col">
+                            <div class="contactUs-card">
+                                <div>
+                                    <a class="item" href="#">
+                                        <div>
+                                            <div class="icon">
+                                                <img src="pic/icon/fb.svg" alt="fb">
+                                            </div>
+                                            <div class="contactUs-card-service">
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
+                                                <span></span>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="QR">
+                                            <img src="pic/QR/Rickroll-QR.png" alt="Rickroll">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="contactUs-card">
+                                <div>
+                                    <a class="item" href="#">
+                                        <div>
+                                            <div class="icon">
+                                                <img class="icon" src="pic/icon/line.svg" alt="line">
+                                            </div>
+                                            <div class="contactUs-card-service">
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
+                                                <span></span>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="QR">
+                                            <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="contactUs-card">
+                                <div>
+                                    <a class="item" href="#">
+                                        <div>
+                                            <div class="icon">
+                                                <img class="icon" src="pic/icon/ig.svg" alt="ig">
+                                            </div>
+                                            <div class="contactUs-card-service">
+                                                <div>
+                                                    <p>09:30~17:30</p>
+                                                    <p>真人客服</p>
+                                                </div>
+                                                <span></span>
+                                                <div>
+                                                    <p>17:30~</p>
+                                                    <p>常見QA自動回覆</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="QR">
+                                            <img src="./pic/QR/Rickroll-QR.png" alt="Rickroll">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-10 col-mi-11">
                     <ul class="footer-wrap row">
-                        <li class="col-xl-3">
-                            <a href="custom_clothing_emulator.html">客製化衣服</a>
+                        <li class="col-3">
+                            <a href="./custom_clothing_emulator.html">客製化衣服</a>
                             <ul class="footer-item">
-                                <li><a href="custom_clothing_emulator.html">衣服模擬器</a></li>
-                                <li><a href="custom_clothing_case.html">客製衣案例</a></li>
+                                <li><a href="./custom_clothing_emulator.html">衣服模擬器</a></li>
+                                <li><a href="./custom_clothing_case.html">客製衣案例</a></li>
                             </ul>
                         </li>
-                        <li class="col-xl-3">
-                            <a href="custom_bag_emulator.html">客製化紙袋</a>
+                        <li class="col-3 col-mi-3">
+                            <a href="./custom_bag_emulator.html">客製化紙袋</a>
                             <ul class="footer-item">
-                                <li><a href="custom_bag_emulator.html">紙袋模擬器</a></li>
-                                <li><a href="custom_bag_case.html">客製袋案例</a></li>
+                                <li><a href="./custom_bag_emulator.html">紙袋模擬器</a></li>
+                                <li><a href="./custom_bag_case.html">客製袋案例</a></li>
                             </ul>
                         </li>
-                        <li class="col-xl-3">
-                            <a href="spot_bag.html">現貨商品</a>
+                        <li class="col-3 col-mi-3">
+                            <a href="./spot_bag.html">現貨商品</a>
                             <ul class="footer-item">
-                                <li><a href="spot_bag.html">現貨紙袋</a></li>
-                                <li><a href="spot_clothing.html">現貨衣服</a></li>
+                                <li><a href="./spot_bag.html">現貨紙袋</a></li>
+                                <li><a href="./spot_clothing.html">現貨衣服</a></li>
                             </ul>
                         </li>
-                        <li class="col-xl-3">
-                            <a href="about.html">關於我們</a>
+                        <li class="col-3 col-mi-3">
+                            <a href="./about.html">關於我們</a>
                             <ul class="footer-item">
-                                <li><a href="service.html">服務條款</a></li>
-                                <li><a href="privacy.html">隱私政策</a></li>
+                                <li><a href="./service.html">服務條款</a></li>
+                                <li><a href="./privacy.html">隱私政策</a></li>
                             </ul>
                         </li>
                     </ul>
-                   
                 </div>
-                <div class="col-xl-3">
-                    <div class="footer-wrap2">
-                        <a href="#"><img src="pic/icon/icon _facebook_.svg" alt="facebook"></a>
-                        <a href="#"><img src="pic/icon/icon _instagram_.svg" alt="instagram"></a>
-                        <a href="#"><img src="pic/icon/icon _youtube_.svg" alt="youtube"></a>
-                    </div>
-                </div>
-                <span></span>
-                <p class="Disclaimer">
-                本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
-                若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。
-                COPYRIGHT © 2022 PARTYME Co.,Ltd. All rights reserved.
-                </p>
+            <div class="col-12 col-md-12">
+            <span class="footer-span"></span>
+            <p class="Disclaimer">
+            本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
+            若有侵權疑慮，您可以私訊「TibaMe-前端設計工程師養成班」，後續會由專人協助處理。
+            COPYRIGHT © 2022 PARTYME Co.,Ltd. All rights reserved.
+            </p>
             </div>
         </div> 
-        <!-- <div class="footer-bc0"></div> -->
-        <!-- <div class="footer-bc1"></div> -->
-        
-        </div>
-        
     </footer>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 4,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-          }
-        });
-      </script>
-
-    <!-- <script>
-        var swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar"
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-          }
-        });
-      </script> -->
 </body>
 </html>

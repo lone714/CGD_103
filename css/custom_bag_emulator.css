@@ -1,0 +1,528 @@
+
+
+.clothing_case{
+    min-height: 300px;
+    padding-top: 100px;
+    position: relative;
+    z-index: 50;
+}
+
+.clothing-case h2{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 30px;
+    color: #D9D9D9;
+}
+
+.clothing_case .pic{
+    min-height: 300px;
+    width: 100%;
+}
+.clothing_case .pic img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container.clothing .row{
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+}
+
+.clothing_emulator{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.clothing_emulator canvas{
+    /* padding-top: 106px; */
+    border-radius: 0 0 28 28px;
+    
+    vertical-align: middle;
+}
+
+
+.clothing_emulator-present,
+.clothing_emulator-control{
+    width: 100%;
+    /* height: 558px; */
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 28px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #B0B0B0;
+    position: relative;
+    
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+}
+
+
+.clothing_emulator-present h2{
+    width: calc(100% + 25px);
+    top: 15px;
+    left: -25px;
+    margin-top:15px ;
+    padding: 15px 25px;
+    background-color: #4C4948;
+    color: #FAC766;
+    display: block;
+    position: absolute;
+
+    filter: drop-shadow(0px 4px 7px rgba(0,0,0,.3));
+    z-index: 1;
+}
+
+.clothing_emulator-present::after{
+    content: "";
+    top: 23px;
+    left: -25px;
+    position: absolute;
+
+    width: 25px;
+    height: 78px;
+    position: absolute;
+    transform:translateX(0%) translateY(25%) skewY(45deg);
+    background: #666464;
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+}
+
+.clothing_emulator-present{
+    padding:0;
+}
+
+
+.clothing_emulator-background{
+    
+    vertical-align: middle;
+
+   
+    border-radius:0 0 28px 28px;
+}
+
+.clothing_emulator-control p{
+    font-size: 18px;
+    padding: 5px;
+}
+.clothing_emulator-control img{
+    display: flex;
+
+ 
+
+}
+.caption{
+    margin: 10px 0px;
+}
+
+.button p{
+    padding: 2px;
+    font-size: 20px;
+}
+.button p + p{
+    padding: 2px;
+    font-size: 14px;
+}
+.caption p:first-child{
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* 控制器 */
+
+
+.pic_location button,
+.B-pic_location button{
+    background: url(../pic/icon/upload.svg)no-repeat , #4C4948;
+    background-position: center ;
+    border: none;
+    padding: 1.5rem 2rem  ;
+    margin: 10px 4px;
+
+    border-radius: 4px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+/* 顏色選擇 */
+
+input[type="radio"] {
+    display:none;
+}
+
+/* 拉條 */
+
+input[type="range"]{
+    -webkit-appearance: none;
+    /* overflow:hidden;     限定範圍 */
+    width:100%;
+    height:8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    
+    outline : none;      /* 避免點選會有藍線或虛線 */
+    background:#C4C4C4;
+    border-radius:10px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+    width:18px;
+    height:18px;
+    background:#FAC766;
+    border-radius:50%;
+}
+
+input[type="range"]::-webkit-slider-thumb::after{
+    content: '';
+    width:18px;
+    height:18px;
+    position: absolute;
+    border: 2px solid #4C4948;
+    
+}
+
+
+.pic_size{
+    position: relative;
+}
+
+.clothing_emulator{
+    padding-top:106px;
+}
+.clothing-emulator-caption{
+    text-align: justify;
+    padding: 20px 0px;
+    justify-content: center;
+    color: #666464;
+    
+}
+.clothing-emulator-caption h2{
+    font-size: 30pt;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+}
+.clothing-emulator-caption .caption{
+    display: flex;
+    justify-content: center;
+}
+.clothing-emulator-caption .caption p{
+    padding: 5px;
+    font-size: 12pt;
+}
+.clothing-emulator-caption .caption .consent{
+    width: 80%;
+    align-self: center;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.clothing-emulator-caption .caption button{
+    width: 100%;
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+    
+    vertical-align: middle;
+    
+}
+.clothing-emulator-caption .caption .form-check input p{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 10pt;
+
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.clothing-emulator-caption button{
+    background:  #4C4948;
+    border: none;
+    color: #FAC766;
+    padding: .6rem 1rem  ;
+    margin: 5px 0px;
+    border-radius: 4px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.clothing-emulator-caption button p{
+    font-size: 18px;
+
+}
+.form-check{
+    display: flex;
+}
+
+
+.Inquiry::after{
+    content: "";
+    width: 100%;
+    height: 200vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background:url(../pic/back-img/back-img03.jpg) ;
+    background-size: cover;
+    background-position: center 20%;
+    position: absolute;
+    transition: .5s;
+    z-index: -1;
+}
+.Inquiry{
+    position: relative;
+    display: flex;
+    margin-top: 470px;
+    margin-bottom: 350px;
+    color: #fff;
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    
+    z-index: auto;
+}
+
+.Inquiry h2{
+    text-align: center;
+    margin-bottom: 100px;
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+}
+.Inquiry p{
+    filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+}
+
+
+/* display: flex; */
+
+
+.choose{
+    position: relative;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    z-index: 55;
+}
+
+.choose svg{
+    padding-left: 3 0px;
+}
+
+.choose p{
+    padding: 0 20px;
+    font-size: 20pt;
+}
+
+
+.choose select{
+    padding: 5px;
+    background-color: #eee;
+}
+
+.choose input{
+    padding: 10px;
+}
+
+.inquiry-button::after{
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+   
+    width: 100%;
+    background-color: #fff;
+}
+
+.inquiry-button{
+    padding: 30px;
+    z-index: -1;
+} 
+.inquiry-button button{
+    background:  #4C4948;
+    border: none;
+    color: #FAC766;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inquiry-slogan {
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: -250px;
+    margin-left:20% ;
+    margin-right:60% ;
+    font-size: 30px;
+}
+.inquiry-slogan p{
+    padding: 20px 0;
+    color: #4C4948;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+
+
+@media screen and (max-width:767.98px) {
+    .clothing_case .pic{
+        display: none;
+    }
+    .location{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .clothing-emulator-caption button{
+        font-size: 12px;
+    }
+    .clothing_emulator{
+        padding-top:75px;
+    }
+    .clothing_emulator-present h2{
+        width: calc(100%);
+        float: left;
+        font-size: 20px;
+        top: 15px;
+        left: -25px;
+        margin-top:15px ;
+        padding: 15px 25px;
+    }
+    
+    .clothing_emulator-present::after{
+        content: "";
+        top: 40px;
+        left: -25px;
+        position: absolute;
+    
+        width: 25px;
+        height: 43px;
+        position: absolute;
+        transform:translateX(0%) translateY(25%) skewY(45deg);
+        background: #666464;
+        filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+
+    .clothing-emulator-caption .caption p {
+        padding: 5px;
+        font-size: 8pt;
+    }
+}
+@media screen and (min-width:767px) {
+    .clothes-wrap .swiper{
+        width: calc(100%);
+
+    }
+    .clothing_case .pic{
+        display: none;
+    }
+
+    .location{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pic_location,.B-pic_location{
+        
+    }
+
+    .clothing_emulator-present h2{
+        width: calc(100% + 25px);
+        top: 15px;
+        left: -25px;
+        margin-top:15px ;
+        padding: 15px 25px;
+        background-color: #4C4948;
+        color: #FAC766;
+        display: block;
+        position: absolute;
+    
+        filter: drop-shadow(0px 4px 7px rgba(0,0,0,.3));
+        z-index: 1;
+    }
+    
+    .clothing_emulator-present::after{
+        content: "";
+        top: 23px;
+        left: -25px;
+        position: absolute;
+    
+        width: 25px;
+        height: 78px;
+        position: absolute;
+        transform:translateX(0%) translateY(25%) skewY(45deg);
+        background: #666464;
+        filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+
+}
+@media screen and (min-width:1024px) {
+
+    .clothes-wrap .swiper{
+        left: 15px;
+        width: calc(75% - 30px);
+    }
+    .clothing_case .pic{
+        display: block;
+    }
+
+    .location{
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:1200px) {
+
+    .clothes-wrap .swiper{
+        left: 15px;
+        width: calc(75% - 30px);
+    }
+ 
+    .clothing_emulator-present,
+    .clothing_emulator-control{
+        width: 100%;
+        /* height: 558px; */
+        padding: 20px;
+        padding-top: 30px;
+        border-radius: 28px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #B0B0B0;
+        position: relative;
+
+        filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+    .clothing_emulator-present{
+        padding: 0;
+    }
+
+
+
+}
