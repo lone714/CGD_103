@@ -400,6 +400,37 @@ input[type="range"]::-webkit-slider-thumb::after{
     .clothing-emulator-caption button{
         font-size: 12px;
     }
+    .clothing_emulator{
+        padding-top:75px;
+    }
+    .clothing_emulator-present h2{
+        width: calc(100%);
+        float: left;
+        font-size: 20px;
+        top: 15px;
+        left: -25px;
+        margin-top:15px ;
+        padding: 15px 25px;
+    }
+    
+    .clothing_emulator-present::after{
+        content: "";
+        top: 40px;
+        left: -25px;
+        position: absolute;
+    
+        width: 25px;
+        height: 43px;
+        position: absolute;
+        transform:translateX(0%) translateY(25%) skewY(45deg);
+        background: #666464;
+        filter: drop-shadow(0px 4px 5px rgba(0,0,0,.3));
+    }
+
+    .clothing-emulator-caption .caption p {
+        padding: 5px;
+        font-size: 8pt;
+    }
 }
 @media screen and (min-width:767px) {
     .clothes-wrap .swiper{

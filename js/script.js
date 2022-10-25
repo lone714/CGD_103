@@ -1,7 +1,3 @@
-
-    function $id(id) {
-    return document.getElementById(id); 
-    }
     function doFist() {
 
     let clothesWrapper = document.querySelector(".swiper-wrapper");

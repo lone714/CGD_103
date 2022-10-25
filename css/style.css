@@ -78,7 +78,7 @@ a{
 }
 a:hover{
     color: #FF612F;
-    transition: .3s;
+clothing_emulator    transition: .3s;
 }
 a:visited{
     color: #FF612F;
@@ -168,7 +168,56 @@ label input[type=checkbox]~p{
     padding: 5px;
 }
 
+/* 跳出視窗 */
 
+dialog{
+    position: fixed ;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 20% auto;
+    border: none;
+    box-shadow: 0 2px 6px #ccc;
+    border-radius: 10px;
+    z-index: 9999;
+    text-align: right;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+dialog span{
+    padding: 2px;
+    user-select: none;
+    cursor: pointer;
+}
+dialog p{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 600;
+}
+dialog p+p{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+@media screen and (max-width:768px) {
+    dialog p{
+        text-align: center;
+        line-height: 1.5;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    dialog p+p{
+        text-align: center;
+        line-height: 1.5;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
 
 /* --到最上面-- */
 .to-top{
@@ -587,4 +636,13 @@ input[name="color"] + span{
 @keyframes baloon_3{
       0% {transform:translateY(0%);}
     100% {transform:translateY(-20%);}
+}
+
+
+@media screen and (max-width:768px) {
+    label input[type=checkbox]~p{
+        font-size: 10pt;
+        float: right;
+        padding: 5px;
+    }
 }
