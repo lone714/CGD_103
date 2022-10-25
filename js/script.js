@@ -1,5 +1,5 @@
     function doFist() {
-
+        
     let clothesWrapper = document.querySelector(".swiper-wrapper");
  
     let curIndex = 0;
@@ -46,6 +46,9 @@
                 }
             });
         });
+
+
+
 
     }
 
