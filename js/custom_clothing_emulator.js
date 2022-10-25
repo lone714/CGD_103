@@ -1,21 +1,23 @@
 function doFist(){
 
+
+    // 彈跳視窗提醒
     $(".terms1").click(function () {
-        if ($(document).height() > $(window).height()) {
-            $("html").addClass("noscroll");
-        }else{
-            $("html").addClass("fixWindow"); 
-        }
+        // if ($(document).height() > $(window).height()) {
+        //     $("html").addClass("noscroll");
+        // }else{
+        //     $("html").addClass("fixWindow"); 
+        // }
         $(".dialog").addClass("dialogOn")
         $(".allViewport").addClass("allViewportOn");
         
     });
     $(".terms2").click(function () {
-        if ($(document).height() > $(window).height()) {
-            $("html").addClass("noscroll");
-        }else{
-            $("html").addClass("fixWindow"); 
-        }
+        // if ($(document).height() > $(window).height()) {
+        //     $("html").addClass("noscroll");
+        // }else{
+        //     $("html").addClass("fixWindow"); 
+        // }
         $(".dialog").addClass("dialogOn")
         $(".allViewport").addClass("allViewportOn");
         
@@ -25,22 +27,22 @@ function doFist(){
             $(".dialog").removeClass("dialogOn");
             $(".allViewport").removeClass("allViewportOn")
 
-            if ($(document).height() > $(window).height()) {
-                $("html").removeClass("noscroll");
-            }else{
-               $("html").removeClass("fixWindow");
-            }
+            // if ($(document).height() > $(window).height()) {
+            //     $("html").removeClass("noscroll");
+            // }else{
+            //    $("html").removeClass("fixWindow");
+            // }
     });
     $(".allViewport").click(
         function () {
             $(".dialog").removeClass("dialogOn");
             $(".allViewport").removeClass("allViewportOn");
 
-            if ($(document).height() > $(window).height()) {
-                $("html").removeClass("noscroll");
-            }else{
-               $("html").removeClass("fixWindow");
-            }
+            // if ($(document).height() > $(window).height()) {
+            //     $("html").removeClass("noscroll");
+            // }else{
+            //    $("html").removeClass("fixWindow");
+            // }
     });
 
 
@@ -65,53 +67,71 @@ function doFist(){
     let canvas = document.getElementById('canvas');
     let c = canvas.getContext('2d');
 
-    let captionObj = document.querySelector('.clothing-emulator-caption');
-    const ImageRatio = 0.66708860759493670886075949367089;
-    let WEmulator = captionObj.offsetWidth;
-    let HEmulator = Math.floor(WEmulator * ImageRatio);
+    let captionObj = document.querySelector('.clothing-emulator-caption');  // 監聽繪圖畫面
+    const ImageRatio = 0.66708860759493670886075949367089;  // 底圖長寬比
+    let WEmulator = captionObj.offsetWidth;     // 繪圖範圍寬
+    let HEmulator = Math.floor(WEmulator * ImageRatio);     // 無條件捨去(繪圖範圍高) 
 
-    let pic_size =  $('#pic_size').val() / 100
-    let pic_Y =  $('#pic_Y').val() / 100 
-    let pic_X =  $('#pic_X').val() / 100 
-
+    // 除以100，方便作為百分比計算
+    let pic_size =  $('#pic_size').val() / 100  // 大小控制桿
+    let pic_Y =  $('#pic_Y').val() / 100        // 高度控制桿
+    let pic_X =  $('#pic_X').val() / 100        // 寬度控制桿
+    
+    
     console.log(pic_size);
-    console.log(pic_Y);
+    console.log(pic_Y);  
     console.log(pic_X);
+    
+    let bgc = ('rgb(255,255,255)');    //選取衣服顏色
+    let r =('#ffffff');   
+    // 監聽選取的顏色
+    
+    $('input[name="color"]+span').click(
+        function(){
+            bgc=$(this).css('background-color')
+            r = rgb2hex(bgc)
+            console.log(r)
+            doIt();
+    });
+    
+    // 將rbg轉為16進位
+    function rgb2hex(rgb) {  
+        rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            function hex(x) {    
+            return ("0" + parseInt(x).toString(16)).slice(-2);  }  
+            return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    }
 
 
     // 載入畫面要先跑一次
     doIt();
-    function doIt (){
-        moveCenter();
-        inputValue();
-        draw();
-    }
-    
     // 監聽視窗變化
     $(window).resize(()=>{
         doIt();
     })
-    // 監聽input數值變化
+
+
+    function doIt (){
+        moveCenter();
+        picXY();
+    }
+    
+    
+    
     // 重新計算input參數
-    function inputValue (){
-        pic_size =  $('#pic_size').val() / 100
-        pic_Y =  $('#pic_Y').val() / 100
-        pic_X =  $('#pic_X').val() / 100
+    function picXY (){
+        pic_size = $('#pic_size').val() / 100;
+        pic_Y = $('#pic_Y').val() / 100;
+        pic_X = $('#pic_X').val() / 100;
+        draw();
     }
 
-    $('#pic_size').bind("input", function(){
-        pic_size =  $('#pic_size').val() / 100
-        draw();
-    })
-    $('#pic_Y').bind("input", function(){
-        pic_Y =  $('#pic_Y').val() / 100
-        draw();
-    })
-    $('#pic_X').bind("input", function(){
-        pic_X =  $('#pic_X').val() / 100
-        draw();
-    })
+    // 監聽input數值變化
+    $('#pic_size').bind("input",picXY)
+    $('#pic_Y').bind("input",picXY)
+    $('#pic_X').bind("input",picXY)
 
+    
 
     // 重新計算畫面尺寸
     function moveCenter(){
@@ -139,7 +159,7 @@ function doFist(){
         pic0.addEventListener('load',loadImage)
 
         let pic1 = new Image()
-        pic1.src = './pic/clothing-emulator/clothing-emulator.jpg'
+        pic1.src = './pic/clothing-emulator/clothing-emulator.png'
         pic1.addEventListener('load',loadImage)
 
         // 圖騰加載，尚未製作圖片上傳的功能，先用範例圖
@@ -148,28 +168,38 @@ function doFist(){
         pic2.src = '././pic/icon/totem500px.png'
         pic2.addEventListener('load',loadImage)
 
+
+
         function loadImage(){
 
             picW = WEmulator*0.28 * pic_size
 
             // c.drawImage(Image,dx,dy,dWidth,dHeight);
+            // 底色繪製
+
+            // console.log(rgb);
+            // c.fillStyle(bgc);
+            c.globalCompositeOperation = 'source-over';
+            c.fillStyle = (r);
+            c.fillRect(0,0,WEmulator,HEmulator);
             // 底圖繪製
-            c.drawImage(pic0,0,0,WEmulator,HEmulator);
-            // 圖騰繪製
             c.globalCompositeOperation = 'multiply'
+            c.drawImage(pic0,0,0,WEmulator,HEmulator);
+            c.globalCompositeOperation = 'source-over';
+            // 圖騰繪製
+            // c.globalCompositeOperation = 'multiply'
             c.drawImage(pic2,
                 ((WEmulator *0.12)+(((WEmulator* 0.28)-(WEmulator * 0.28 * pic_size))* pic_X)),
                 ((WEmulator *0.15)+(((HEmulator*0.6)-(WEmulator * 0.28 * pic_size)) * pic_Y )),
                 (WEmulator * 0.28 * pic_size),
                 (WEmulator * 0.28 * pic_size));
+                // c.globalCompositeOperation = 'source-over';
+                // 紋理繪製
+                
+            c.globalCompositeOperation = 'multiply';
             c.globalCompositeOperation = 'source-over';
-            // 紋理繪製
-            c.globalCompositeOperation = 'destination-atop';
-            // c.globalAlpha=0.5;
-            c.drawImage(pic0,0,0,WEmulator,HEmulator);
-            c.globalCompositeOperation = 'source-over';
-            // c.globalAlpha=1;
-            
+            c.drawImage(pic1,0,0,WEmulator,HEmulator);
+
             // 說明文字
             c.font='bold 20px Tahoma';
             c.fillStyle='#ccc'
