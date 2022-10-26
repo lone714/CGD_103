@@ -27,6 +27,11 @@
 
 }
 
+/* 禁用連結 */
+.main-nav ul.menu:nth-child(3) a{
+    pointer-events: none;
+}
+
 :root{
     --swiper-theme-color:#FAC766;
     /* --windor-Width:calc(100% +100vw -1200px); */
