@@ -162,8 +162,8 @@ ul.menu>li:hover::after {
 
     .hb span {
         display: block;
-        width: 34px;
-        height: 3px;
+        width: 24px;
+        height: 1.8px;
         border-radius: 3px;
         margin: 8px auto 0;
         background-color: #4C4948;
@@ -194,7 +194,7 @@ ul.menu>li:hover::after {
 
 
     .hb span:nth-child(1) {
-        top: 9px;
+        top: 12px;
         transition: transform .3s 0s, top .3s .3s;
     }
     .hb span:nth-child(2) {
@@ -204,7 +204,7 @@ ul.menu>li:hover::after {
         transition: opacity .6s .3s;
     }
     .hb span:nth-child(3) {
-        top: 29px;
+        top: 26px;
         transition: transform .3s 0s, top .3s .3s;
     }
     

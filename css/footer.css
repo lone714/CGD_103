@@ -215,12 +215,13 @@ footer{
         right: 0;
         margin-bottom: 0;
         padding: 10px;
+        border-radius: 16px;
     }
     .contactUs-card-service{
         width: calc(25vw - 8px);
         top: calc(40% - 4px);
         left: 4px;
-        border-radius: 8px 8px 30px 30px;
+        border-radius: 4px 4px 14px 14px;
 
     }
 

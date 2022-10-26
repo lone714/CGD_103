@@ -188,7 +188,7 @@ input[type="radio"] {
 
 
 @media screen and (max-width:767.98px) {
-    .Case-control{
+   .Case-control{
         display: flex;
         margin-bottom: 30px;
     }

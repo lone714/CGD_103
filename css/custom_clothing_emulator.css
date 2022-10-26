@@ -216,6 +216,9 @@ input[type="range"]::-webkit-slider-thumb::after{
     margin-bottom: 15px;
     border-bottom: 1px solid #fff;
 }
+.caption .color{
+    justify-content: center;
+}
 .clothing-emulator-caption .caption{
     display: flex;
     justify-content: center;
@@ -402,6 +405,14 @@ input[type="range"]::-webkit-slider-thumb::after{
         justify-content: center;
     }
 
+    .clothing_emulator-control p{
+        font-size: 14px;
+        /* margin-bottom:5px ; */
+    }
+    .clothing_emulator-control .caption p{
+        padding: 0;
+        margin: 0;
+    }
     .clothing-emulator-caption button{
         font-size: 12px;
     }
