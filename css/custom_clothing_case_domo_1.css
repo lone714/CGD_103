@@ -55,6 +55,7 @@
     margin-right: 20px;
 }
 .domo-pic img{
+    vertical-align: middle;
     width: 100%;
 }
 .domo-item{
@@ -103,4 +104,22 @@
 .domo-item .picS img{
     width: 100%;
     cursor: pointer;
+}
+
+
+@media screen and (max-width:768px) {
+    .Case_domo h3{
+        display: block;
+        line-height: 1.5;
+    }
+    .domo-wrap{
+        flex-direction: column;
+    }
+    .domo-pic,.domo-item{
+        width: 100%;
+    }
+    .picS{
+        margin-top: 20px;
+        order:-2;
+    }
 }
